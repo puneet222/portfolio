@@ -53,8 +53,8 @@ class AboutPage extends React.Component {
               <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "1.2em"}}>{aboutContent}</span>
             </Typist>
           </div>
-          <div style={{"maxHeight" : "70%", "overflowY" : "scroll" , "overflowX" : "hidden", "paddingBottom" : "3%"}}>
-            <div style={{"paddingLeft" : "11%", "marginTop" : "0px" , "height" : "60%"}} className="ui mobile only grid">
+          <div style={{"maxHeight" : "70%", "overflowY" : "scroll" , "overflowX" : "hidden", "paddingBottom" : "3%"}} className="ui mobile only grid">
+            <div style={{"paddingLeft" : "11%", "marginTop" : "0px" , "height" : "60%"}}>
               <Typist cursor={{"hideWhenDone" : true}}>
                 <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "0.8em"}}>{aboutContent}</span>
               </Typist>
