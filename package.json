@@ -17,7 +17,9 @@
     "react-animations": "^0.1.0",
     "react-dom": "15.4.0",
     "react-image-responsive": "^1.0.18",
+    "react-native-animatable": "^1.2.0",
     "react-progressive-bg-image": "^1.0.7",
+    "react-rotating-text": "^1.2.0",
     "react-typist": "^1.1.0",
     "semantic-ui": "2.2.7",
     "styled-components": "^2.0.0-17"

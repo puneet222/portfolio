@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 @import url('https://fonts.googleapis.com/css?family=Exo+2:200');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 body {
   margin: 0;
   padding: 0;
@@ -56,4 +58,19 @@ body {
 .rightPosition {
   position: absolute;
   right: 0 ;
+}
+
+.aboutBackground {
+  /*---------------------------------  Deep Space -------------------------------------*/
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.handwritingFont {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.righteous {
+  font-family: 'Righteous', sans-serif;
 }

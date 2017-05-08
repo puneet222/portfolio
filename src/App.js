@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import SelectedFoods from './SelectedFoods';
 import FoodSearch from './FoodSearch';
 import Home from './Home' ;
+import About from './About' ;
 import classNames from 'classnames';
 
 class App extends Component {
@@ -9,8 +10,8 @@ class App extends Component {
     super(props);
     this.state = {
       iconsLeftPadding : 0,
-      homeState : true,
-      aboutState : false,
+      homeState : false,
+      aboutState : true,
       skillsState : false,
       projectState : false,
       internshipState : false,
@@ -40,6 +41,8 @@ class App extends Component {
   }
 
   handleHomeClick = () => {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", "#1b1c1d");
     this.setState({
       homeState : true,
       aboutState : false,
@@ -51,6 +54,8 @@ class App extends Component {
   }
 
   handleAboutClick = () => {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", "#BF360C");
     this.setState({
       homeState : false,
       aboutState : true,
@@ -152,11 +157,15 @@ class App extends Component {
       <div className='App'>
         <div className='ui text container'>
         {
-          this.state.home
-            ? <FoodSearch />
+          this.state.homeState
+            ? <Home videoURL={this.state.videoURL} />
             : null
         }
-          <Home videoURL={this.state.videoURL}/>
+        {
+          this.state.aboutState
+            ? <About />
+            : null
+        }
         </div>
         <div className="ui inverted segment" id="footer">
         {/* ------------------------------  this is division for computer and tablets ------------------------------- */}
