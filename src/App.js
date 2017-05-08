@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       iconsLeftPadding : 0,
-      homeState : false,
+      homeState : true,
       aboutState : false,
       skillsState : false,
       projectState : false,
@@ -115,7 +115,7 @@ class App extends Component {
     };
 
     var iconPadding = {
-      'padding' : '10px'
+      'padding' : '8px'
     };
 
     var homeClass = classNames({
@@ -150,11 +150,6 @@ class App extends Component {
 
     return (
       <div className='App'>
-        <div className="fullscreen-bg">
-          <video loop muted autoPlay className="fullscreen-bg__video">
-              <source src="https://www.dropshots.com/video.php?u=https%3A%2F%2Fstorage04.dropshots.com%2Fphotos6000%2Fphotos%2F1388321%2F20170506%2F070642.mp4" type="video/mp4" />
-          </video>
-        </div>
         <div className='ui text container'>
         {
           this.state.home

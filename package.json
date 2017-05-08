@@ -12,9 +12,15 @@
   "dependencies": {
     "babel-plugin-transform-class-properties": "6.22.0",
     "classnames": "^2.2.5",
+    "radium": "^0.18.2",
     "react": "15.4.0",
+    "react-animations": "^0.1.0",
     "react-dom": "15.4.0",
-    "semantic-ui": "2.2.7"
+    "react-image-responsive": "^1.0.18",
+    "react-progressive-bg-image": "^1.0.7",
+    "react-typist": "^1.1.0",
+    "semantic-ui": "2.2.7",
+    "styled-components": "^2.0.0-17"
   },
   "scripts": {
     "start": "react-scripts start",
