@@ -29,10 +29,6 @@ class HomePage extends React.Component {
     var subHeading1 = "I'm"  ;
     var subHeading2 = "<FullStack />" ;
     var subheading3 = "Developer" ;
-    var subHeadingStyle = {
-      "position" : "absolute",
-      "right" : this.state.rightPostion
-    }
     var subHeadingClass = classNames({
       typeFont : true,
       rightPosition : this.state.rightPostion
@@ -42,12 +38,6 @@ class HomePage extends React.Component {
       "element": '|',
       hideWhenDone: true
     }
-    var backgroundImageStyle = {
-        flex: 1,
-        width: null,
-        height: null,
-        resizeMode: 'cover'
-    };
     const styles = {
       "position" : "absolute",
       "width" : "82%",
@@ -62,7 +52,6 @@ class HomePage extends React.Component {
         animationName: Radium.keyframes(bounce, 'bounce')
       }
     }
-    var $mountNode = document.getElementById('drive-in');
     return (
       <div>
       <div className="ui center aligned" style={styles}>
@@ -79,13 +68,32 @@ class HomePage extends React.Component {
           <div className="tint">
           </div>
         </div>
+        <div className='ui tablet only grid' style={{"marginTop" : "0px"}}>
+          <ProgressiveImage
+            src={backgroundImage}
+            placeholder="Developer"
+            style={{
+              position : "absolute",
+              left : 0,
+              right : 0,
+              height: 1000,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              padding: '0px'
+            }}
+          />
+          <div className="tint">
+          </div>
+        </div>
         <div className='ui mobile only grid' style={{"marginTop" : "0px"}}>
         <ProgressiveImage
           src={backgroundImage}
           placeholder="Developer"
           style={{
-            width : '100%',
-            height: 600,
+            position : "absolute",
+            left : 0,
+            right : 0,
+            height: 700,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
           }}
