@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import FoodSearch from './FoodSearch';
 import Home from './Home' ;
 import About from './About' ;
+import Skills from './Skills' ;
 import classNames from 'classnames';
 
 class App extends Component {
@@ -11,8 +12,8 @@ class App extends Component {
     this.state = {
       iconsLeftPadding : 0,
       homeState : false,
-      aboutState : true,
-      skillsState : false,
+      aboutState : false,
+      skillsState : true,
       projectState : false,
       internshipState : false,
       contactState : false,
@@ -164,6 +165,11 @@ class App extends Component {
         {
           this.state.aboutState
             ? <About />
+            : null
+        }
+        {
+          this.state.skillsState
+            ? <Skills />
             : null
         }
         </div>

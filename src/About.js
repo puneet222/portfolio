@@ -24,9 +24,9 @@ class AboutPage extends React.Component {
     aboutContent += "Currently I'm pursuing B.E. (Computer Science) from PEC University of Technology, Chandigarh. "
     aboutContent += "I'm very enthusiastic about web development, and always very interested to learn about latest technologies. "
     aboutContent += "I also like to read blogs and sometimes in my free time I use to do sketching, painting. "
-    // aboutContent += "I'm also a TV Series addict and love to read novels."
+    aboutContent += "I'm also a TV Series addict and love to read novels."
     return (
-      <div className="aboutBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0}}>
+      <div className="aboutBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
         <div className="tint">
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "width" : "100%"}}>
