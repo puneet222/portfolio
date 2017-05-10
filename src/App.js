@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import SelectedFoods from './SelectedFoods';
-import FoodSearch from './FoodSearch';
+// import FoodSearch from './FoodSearch';
 import Home from './Home' ;
 import About from './About' ;
 import Skills from './Skills' ;
