@@ -62,18 +62,30 @@ body {
   right: 0 ;
 }
 
-.aboutBackground {
+.aboutBackground2 {
   /*---------------------------------  Deep Space -------------------------------------*/
   background: #000000;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to righ, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.skillsBackground {
+.aboutBackground{
+  background: #8E0E00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1F1C18, #3a0000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1F1C18, #4c0303); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.skillsBackground2 {
   /*---------------------------------  Midnight City -------------------------------------*/
   background: #232526;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.skillsBackground  {
+  background: #16222A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #001421, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .handwritingFont {

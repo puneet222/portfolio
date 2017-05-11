@@ -10,6 +10,7 @@
     "react-scripts": "0.8.5"
   },
   "dependencies": {
+    "aphrodite": "^1.2.1",
     "babel-plugin-transform-class-properties": "6.22.0",
     "circular-progress-angular-gradient": "^1.0.3",
     "classnames": "^2.2.5",
@@ -19,6 +20,7 @@
     "react-animations": "^0.1.0",
     "react-circular-progressbar": "^0.1.4",
     "react-dom": "15.4.0",
+    "react-fade": "^1.1.1",
     "react-image": "^1.0.1",
     "react-image-responsive": "^1.0.18",
     "react-native-animatable": "^1.2.0",

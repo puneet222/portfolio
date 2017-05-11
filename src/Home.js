@@ -8,6 +8,7 @@ import Typist from 'react-typist' ;
 import 'react-typist/dist/Typist.css' ;
 import classNames from 'classnames';
 import ProgressiveImage from 'react-progressive-bg-image';
+import { default as Fade } from 'react-fade';
 
 class HomePage extends React.Component {
 
@@ -55,7 +56,7 @@ class HomePage extends React.Component {
     return (
       <div>
       <div className="ui center aligned" style={styles}>
-        <h1 className="homeContent largerFont">puneet222.github.io</h1>
+        <h1 className="homeContent largerFont"><Fade duration={1.2}>puneet222.github.io</Fade></h1>
         <Typist avgTypingDelay={170} startDelay={1500} onTypingDone={this.tabRight} cursor={cursorSpecs} >
           <span className={subHeadingClass}>{subHeading1} <span style={{"color" : "#FF1744"}}> {subHeading2} </span> {subheading3}</span>
         </Typist>

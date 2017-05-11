@@ -1,4 +1,5 @@
 import React from 'react';
+import { default as Fade } from 'react-fade';
 import Typist from 'react-typist' ;
 import 'react-typist/dist/Typist.css' ;
 
@@ -40,7 +41,7 @@ class AboutPage extends React.Component {
             {sh1}
           </div>*/}
           <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.3em", "paddingLeft" : "6%"}}>
-            <span>{sh1}</span><span className="righteous" style={{"color" : "#FF3D00" , "fontSize" : "2.2em", "paddingLeft" : "0%" , "paddingRight" : "0%"}}>About Me</span><span>{eh1}</span>
+            <span>{sh1}</span><Fade duration={0.9}><span className="righteous" style={{"color" : "#FF3D00" , "fontSize" : "2.2em", "paddingLeft" : "0%" , "paddingRight" : "0%"}}>About Me</span></Fade><span>{eh1}</span>
           </div>
           {/*<div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em", "paddingLeft" : "9%"}}>
             {eh1}
@@ -49,7 +50,7 @@ class AboutPage extends React.Component {
             {sp}
           </div>
           <div style={{"paddingLeft" : "11%", "marginRight" : "30%"}} className="ui computer only grid tablet only grid">
-            <Typist>
+            <Typist startDelay={1500}>
               <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "1.2em"}}>{aboutContent}</span>
             </Typist>
           </div>
