@@ -168,7 +168,7 @@ var projectData = [
     ],
     languages : [
       "ReactJS",
-      "Senatic UI"
+      "Semantic UI"
     ],
     info : "This is my portfolio made from scratch. Made with latest Technologies like ReactJS and Sematic UI"
   }

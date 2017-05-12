@@ -23,29 +23,49 @@ var HelloModal = React.createClass({
   render: function() {
     // -------------------------  here comes the modal content  ----------------------------------
     var modal_background = (this.state.visible) ? 'ui dimmer modals page transition visible active' : 'ui dimmer modals page transition hidden' ;
-    var modal_classes = (this.state.visible)? 'ui basic modal active' : 'ui basic modal transition hidden';
+    var modal_classes = (this.state.visible)? 'active' : 'hidden';
+    var languages = [] ;
+    var colors = ["red" , "teal" , "pink" , "blue" , "orange" , "brown" , "green" , "grey" , "black"] ;
+    for(var i = 0 ; i < this.props.languages.length ; i++){
+      let classes = "ui " + colors[i] + " label" ;
+      let jsxElement = (
+        <a className={classes}>{this.props.languages[i]}</a>
+      )
+      languages.push(jsxElement) ;
+    }
     return (
       <div className={modal_background}>
         <div className={modal_classes}>
-          <div className="ui icon header">
-            <i className="archive icon"></i>
-            Archive Old Messages
-          </div>
-          <div className="content">
-            <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
-          </div>
-          <div className="actions">
-            <div className="ui red basic cancel inverted button">
-              <i className="remove icon"></i>
-              No
+          <div style={{"padding" : "10%"}}>
+            <i className="remove circle icon" style={{"position": "absolute" , "color" : "#F44336" , "right" : "10%" , "fontSize" : "1.6em" , "top" : "8%" , "cursor" : "pointer"}} onClick={this.closeModal}></i>
+            <div className="ui grid">
+              <div className="six wide column">
+                <ProgressiveImage
+                  src={this.props.image}
+                  placeholder="Developer"
+                  style={{
+                    position : "absolute",
+                    left : 0,
+                    right : 0,
+                    height : "20vw",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    padding: '0px'
+                  }}
+                />
+              </div>
+              <div className="ten wide column">
+                <h1 style={{"color" : "white" , "fontSize" : "2.5em" , "textAlign" : "center", "letterSpacing" : "2px" , "fontFamily" : "sans-serif" , "fontWeight" : "100"}}><Fade duration={0.6}>{this.props.name}<span><a href={this.props.link} style={{"fontSize" : "0.8em"}} target="_blank">    <i className="linkify icon"></i></a></span></Fade></h1>
+                <h4 className="homeContent" style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "fontWeight" : "100"}}><Fade duration={0.8}>{this.props.info}</Fade></h4>
+                <h6 style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "right", "letterSpacing" : "1px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "fontStyle" : "italic"}}>{this.props.duration}</h6>
+                <div style={{"textAlign" : "right"}}>
+                  {languages}
+                </div>
+              </div>
             </div>
-            <div className="ui green ok inverted button">
-              <i className="checkmark icon"></i>
-              Yes
-            </div>
           </div>
-        <button onClick={this.closeModal}>close</button>
-      </div>
+
+        </div>
       </div>
     );
   }
@@ -57,7 +77,7 @@ class ProjectComponent extends React.Component {
     super(props);
     this.state = {
         visible : false,
-        opacity : 0.7,
+        opacity : 0.4,
         cursor : "default"
     };
     this.openModal = this.openModal.bind(this);
@@ -72,10 +92,10 @@ class ProjectComponent extends React.Component {
   }
 
   handleHover(){
-    this.setState({opacity : 1 , cursor : "pointer"}) ;
+    this.setState({opacity : 1 , cursor : "pointer" , visible : false}) ;
   }
   handleOut(){
-    this.setState({opacity : 0.5 , cursor : "default"}) ;
+    this.setState({opacity : 0.4 , cursor : "default"}) ;
   }
 
   openModal(){
@@ -112,9 +132,17 @@ class ProjectComponent extends React.Component {
 
     return (
       <div className="projectBackground">
-        <HelloModal visible={this.state.visible}/>
+        <HelloModal
+        visible={this.state.visible}
+        image={this.props.images[0]}
+        name={this.props.name}
+        info={this.props.info}
+        duration={this.props.duration}
+        link={this.props.link}
+        languages={this.props.languages}
+        />
         <div style={customStyles.div} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
-        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={2000} infiniteLoop={true} onClickItem={this.myFunc} dynamicHeight={true} onClickItem={this.openModal} emulateTouch>
+        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={2000} infiniteLoop={true} onClickItem={this.myFunc} dynamicHeight={true} onClickItem={this.openModal}>
               {imagesComponent}
         </Carousel>
         </div>

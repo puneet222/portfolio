@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400');
-@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister');
-@import url('https://fonts.googleapis.com/css?family=Monoton');
-@import url('https://fonts.googleapis.com/css?family=Exo+2:200');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300');
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 @import url('https://fonts.googleapis.com/css?family=Righteous');
@@ -88,10 +85,23 @@ body {
   background: linear-gradient(to left, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.projectBackground {
+.projectBackground2 {
   background: #e9d362;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #333333, #513e01);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #333333, #513e01); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.projectBackground3 {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #023a03, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #023a03, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.projectBackground {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #53346D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #53346D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .handwritingFont {

@@ -28,17 +28,41 @@ class ProjectPage extends React.Component {
       }
       let jsxElement = (
         <div className="five wide column" style={{"backgroundColor" : "transparent" , "padding" : "0"}}>
-          <ProjectComponent axis={axis} images={ProjectData[i]["images"]}/>
+          <ProjectComponent
+          axis={axis}
+          images={ProjectData[i]["images"]}
+          name={ProjectData[i]["name"]}
+          info={ProjectData[i]["info"]}
+          duration={ProjectData[i]["duration"]}
+          link={ProjectData[i]["link"]}
+          languages={ProjectData[i]["languages"]}
+          />
         </div>
       )
       let mobileJsxElement = (
         <div className="sixteen wide column" style={{"backgroundColor" : "pink" , "padding" : "0"}}>
-          <ProjectComponent axis={axis} images={ProjectData[i]["images"]}/>
+          <ProjectComponent
+          axis={axis}
+          images={ProjectData[i]["images"]}
+          name={ProjectData[i]["name"]}
+          info={ProjectData[i]["info"]}
+          duration={ProjectData[i]["duration"]}
+          link={ProjectData[i]["link"]}
+          languages={ProjectData[i]["languages"]}
+          />
         </div>
       )
       let tabletJsxElement = (
         <div className="eight wide column" style={{"backgroundColor" : "pink" , "padding" : "0"}}>
-          <ProjectComponent axis={axis} images={ProjectData[i]["images"]}/>
+          <ProjectComponent
+          axis={axis}
+          images={ProjectData[i]["images"]}
+          name={ProjectData[i]["name"]}
+          info={ProjectData[i]["info"]}
+          duration={ProjectData[i]["duration"]}
+          link={ProjectData[i]["link"]}
+          languages={ProjectData[i]["languages"]}
+          />
         </div>
       )
       tabletProjects.push(tabletJsxElement) ;
@@ -50,8 +74,9 @@ class ProjectPage extends React.Component {
       <div className="projectBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
         <div className="tint">
         </div>
-        <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "width" : "100%"}}>
-          <div className="ui grid computer only grid">
+        <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "1%" , "paddingRight" : "3%" , "width" : "100%"}}>
+          <h4 className="righteous" style={{"color" : "#D500F9" , "fontSize" : "4em" , "fontWeight" : "100" , "textAlign" : "center" , "paddingBottom" : "2%"}}><Fade duration={0.9}>Projects</Fade></h4>
+          <div className="ui grid computer only grid" style={{"marginLeft" : "3%"}}>
             {projects}
           </div>
           <div className="ui grid tablet only grid">
