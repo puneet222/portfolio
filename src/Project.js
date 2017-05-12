@@ -5,7 +5,6 @@ import ProjectData from './projectMetaData' ;
 import ProjectComponent from './ProjectComponent' ;
 import ProgressiveImage from 'react-progressive-bg-image';
 import 'react-typist/dist/Typist.css' ;
-import wikiAnalyserImage1 from '../images/Project/wikiAnalyser/search.png' ;
 
 class ProjectPage extends React.Component {
 
@@ -28,7 +27,7 @@ class ProjectPage extends React.Component {
         axis = "vertical" ;
       }
       let jsxElement = (
-        <div className="five wide column" style={{"backgroundColor" : "pink" , "padding" : "0"}}>
+        <div className="five wide column" style={{"backgroundColor" : "transparent" , "padding" : "0"}}>
           <ProjectComponent axis={axis} images={ProjectData[i]["images"]}/>
         </div>
       )

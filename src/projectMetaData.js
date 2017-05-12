@@ -1,15 +1,20 @@
-import wikiAnalyserImage1 from '../images/Project/wikiAnalyser/search.png' ;
-import wikiAnalyserImage2 from '../images/Project/wikiAnalyser/bar.png' ;
-import wikiAnalyserImage3 from '../images/Project/wikiAnalyser/graph.png' ;
-import askit1 from '../images/Project/askit/home.png' ;
-import askit2 from '../images/Project/askit/signup.png' ;
-import askit3 from '../images/Project/askit/homeAfter.png' ;
+import wikiAnalyserImage1 from '../images/Project/wikiAnalyser/wiki1.png' ;
+import wikiAnalyserImage2 from '../images/Project/wikiAnalyser/wiki2.png' ;
+import wikiAnalyserImage3 from '../images/Project/wikiAnalyser/wiki3.png' ;
+import wikiAnalyserImage4 from '../images/Project/wikiAnalyser/wiki4.png' ;
+import askit1 from '../images/Project/askit/askit1.png' ;
+import askit2 from '../images/Project/askit/askit2.png' ;
+import askit3 from '../images/Project/askit/askit3.png' ;
+import askit4 from '../images/Project/askit/askit4.png' ;
+import askit5 from '../images/Project/askit/askit5.png' ;
 import webCrawler from '../images/Project/webCrawler/webc.png' ;
-import mean1 from '../images/Project/mean/mean.png' ;
-import mean2 from '../images/Project/mean/mean1.png' ;
+import mean1 from '../images/Project/mean/mean1.png' ;
+import mean2 from '../images/Project/mean/mean2.png' ;
 import portfolio1 from '../images/Project/portfolio/portfolio1.png' ;
 import portfolio2 from '../images/Project/portfolio/portfolio2.png' ;
 import portfolio3 from '../images/Project/portfolio/portfolio3.png' ;
+import portfolio4 from '../images/Project/portfolio/portfolio4.png' ;
+import portfolio5 from '../images/Project/portfolio/portfolio5.png' ;
 import fcc1 from '../images/Project/fcc/fcc1.png' ;
 import fcc2 from '../images/Project/fcc/fcc2.png' ;
 import fcc3 from '../images/Project/fcc/fcc3.png' ;
@@ -17,8 +22,11 @@ import fcc4 from '../images/Project/fcc/fcc4.png' ;
 import fcc5 from '../images/Project/fcc/fcc5.png' ;
 import fcc6 from '../images/Project/fcc/fcc6.png' ;
 import fcc7 from '../images/Project/fcc/fcc7.png' ;
+import fcc8 from '../images/Project/fcc/fcc8.png' ;
 import ds from '../images/Project/ds/ds.png' ;
 import asv1 from '../images/Project/asv/asv1.png' ;
+import asv2 from '../images/Project/asv/asv2.png' ;
+
 
 var projectData = [
   {
@@ -28,7 +36,9 @@ var projectData = [
     images : [
         askit1,
         askit2,
-        askit3
+        askit3,
+        askit4,
+        askit5
     ],
     languages : [
       "HTML",
@@ -46,7 +56,8 @@ var projectData = [
     images : [
         wikiAnalyserImage1,
         wikiAnalyserImage2,
-        wikiAnalyserImage3
+        wikiAnalyserImage3,
+        wikiAnalyserImage4
     ],
     languages : [
       "HTML",
@@ -70,7 +81,8 @@ var projectData = [
       fcc4,
       fcc5,
       fcc6,
-      fcc7
+      fcc7,
+      fcc8
     ],
     languages : [
       "HTML",
@@ -97,7 +109,8 @@ var projectData = [
     duration : "Aug 2016 to Nov 2016",
     link : "https://github.com/puneet222/ASV",
     images : [
-      asv1
+      asv1,
+      asv2
     ],
     languages : [
       "HTML",
@@ -149,7 +162,9 @@ var projectData = [
     images : [
       portfolio1,
       portfolio2,
-      portfolio3
+      portfolio3,
+      portfolio4,
+      portfolio5
     ],
     languages : [
       "ReactJS",

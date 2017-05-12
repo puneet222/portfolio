@@ -7,7 +7,6 @@ import Modal from 'react-modal' ;
 
 var HelloModal = React.createClass({
   getInitialState: function() {
-    console.log(this.props.visible) ;
     return {
       visible: this.props.visible
     };
@@ -19,7 +18,6 @@ var HelloModal = React.createClass({
 
   },
   componentWillReceiveProps : function(nextProps) {
-    console.log(nextProps.visible) ;
     this.setState({visible : nextProps.visible})
   },
   render: function() {
@@ -59,28 +57,32 @@ class ProjectComponent extends React.Component {
     super(props);
     this.state = {
         visible : false,
+        opacity : 0.7,
+        cursor : "default"
     };
     this.openModal = this.openModal.bind(this);
+    this.handleHover = this.handleHover.bind(this);
+    this.handleOut = this.handleOut.bind(this);
   }
 
   name = "Wiki Analyser" ;
-  images = [
-    require('../images/Project/wikiAnalyser/search.png'),
-    require('../images/Project/wikiAnalyser/graph.png'),
-    require('../images/Project/wikiAnalyser/bar.png')
-  ]
 
   myFunc(){
     alert("hahah") ;
   }
 
+  handleHover(){
+    this.setState({opacity : 1 , cursor : "pointer"}) ;
+  }
+  handleOut(){
+    this.setState({opacity : 0.5 , cursor : "default"}) ;
+  }
+
   openModal(){
-    console.log("functoin call") ;
     this.setState({visible : true});
   }
 
   render() {
-    console.log(this.props.images);
     let imagesComponent = [] ;
     for(var i = 0 ; i < this.props.images.length ; i++){
       let jsxElement = (
@@ -99,34 +101,22 @@ class ProjectComponent extends React.Component {
     bottom                : 'auto',
     marginRight           : '-50%',
     transform             : 'translate(-50%, -50%)'
-  }
-};
+  },
+    div : {
+      width : "100%" ,
+      opacity : this.state.opacity,
+      cursor : this.state.cursor
+    }
+  };
+
 
     return (
       <div className="projectBackground">
         <HelloModal visible={this.state.visible}/>
-        <div style={{"width" : "100%"}}>
-        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={2000} infiniteLoop={true} onClickItem={this.myFunc} dynamicHeight emulateTouch>
+        <div style={customStyles.div} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
+        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={2000} infiniteLoop={true} onClickItem={this.myFunc} dynamicHeight={true} onClickItem={this.openModal} emulateTouch>
               {imagesComponent}
-          </Carousel>
-          <button onClick={this.openModal}>OPEN MODAL</button>
-          {/*<Modal
-          isOpen={true}
-          style={customStyles}
-          contentLabel="Example Modal"
-          >
-
-          <h2 ref="subtitle">Hello</h2>
-          <button>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>*/}
+        </Carousel>
         </div>
       </div>
     );
