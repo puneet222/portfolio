@@ -1,4 +1,24 @@
-import wikiAnalyserImage1 from '../images/Project/wikiAnalyser/serch.png' ;
+import wikiAnalyserImage1 from '../images/Project/wikiAnalyser/search.png' ;
+import wikiAnalyserImage2 from '../images/Project/wikiAnalyser/bar.png' ;
+import wikiAnalyserImage3 from '../images/Project/wikiAnalyser/graph.png' ;
+import askit1 from '../images/Project/askit/home.png' ;
+import askit2 from '../images/Project/askit/signup.png' ;
+import askit3 from '../images/Project/askit/homeAfter.png' ;
+import webCrawler from '../images/Project/webCrawler/webc.png' ;
+import mean1 from '../images/Project/mean/mean.png' ;
+import mean2 from '../images/Project/mean/mean1.png' ;
+import portfolio1 from '../images/Project/portfolio/portfolio1.png' ;
+import portfolio2 from '../images/Project/portfolio/portfolio2.png' ;
+import portfolio3 from '../images/Project/portfolio/portfolio3.png' ;
+import fcc1 from '../images/Project/fcc/fcc1.png' ;
+import fcc2 from '../images/Project/fcc/fcc2.png' ;
+import fcc3 from '../images/Project/fcc/fcc3.png' ;
+import fcc4 from '../images/Project/fcc/fcc4.png' ;
+import fcc5 from '../images/Project/fcc/fcc5.png' ;
+import fcc6 from '../images/Project/fcc/fcc6.png' ;
+import fcc7 from '../images/Project/fcc/fcc7.png' ;
+import ds from '../images/Project/ds/ds.png' ;
+import asv1 from '../images/Project/asv/asv1.png' ;
 
 var projectData = [
   {
@@ -6,7 +26,9 @@ var projectData = [
     duration : "Jan 2016 to Apr 2016",
     link : "https://github.com/puneet222/Askit.git",
     images : [
-
+        askit1,
+        askit2,
+        askit3
     ],
     languages : [
       "HTML",
@@ -22,7 +44,9 @@ var projectData = [
     duration : "May 2016 to Jun 2016",
     link : "https://github.com/puneet222/Wiki-Analyser.git",
     images : [
-        wikiAnalyserImage1
+        wikiAnalyserImage1,
+        wikiAnalyserImage2,
+        wikiAnalyserImage3
     ],
     languages : [
       "HTML",
@@ -40,7 +64,13 @@ var projectData = [
     duration : "May 2016 to Jul 2016",
     link : "https://www.freecodecamp.com/puneet222",
     images : [
-
+      fcc1,
+      fcc2,
+      fcc3,
+      fcc4,
+      fcc5,
+      fcc6,
+      fcc7
     ],
     languages : [
       "HTML",
@@ -55,7 +85,7 @@ var projectData = [
     duration : "Sep 2016",
     link : "https://github.com/puneet222/WebCrawler",
     images : [
-
+      webCrawler
     ],
     languages : [
       "JAVA"
@@ -67,7 +97,7 @@ var projectData = [
     duration : "Aug 2016 to Nov 2016",
     link : "https://github.com/puneet222/ASV",
     images : [
-
+      asv1
     ],
     languages : [
       "HTML",
@@ -85,7 +115,7 @@ var projectData = [
     duration : "There is no duration for this.",
     link : "https://github.com/puneet222/Data-Structures",
     images : [
-
+      ds
     ],
     languages : [
       "C",
@@ -98,7 +128,8 @@ var projectData = [
     duration : "Jan 2017 to May 2017",
     link : "",
     images : [
-
+      mean1,
+      mean2
     ],
     languages : [
       "MongoDB",
@@ -116,7 +147,9 @@ var projectData = [
     duration : "Apr 2017 to May 2017",
     link : "https://github.com/puneet222/puneet222.github.io",
     images : [
-
+      portfolio1,
+      portfolio2,
+      portfolio3
     ],
     languages : [
       "ReactJS",
