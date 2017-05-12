@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Home from './Home' ;
 import About from './About' ;
 import Skills from './Skills' ;
+import Project from './Project' ;
 import classNames from 'classnames';
 
 class App extends Component {
@@ -13,8 +14,8 @@ class App extends Component {
       iconsLeftPadding : 0,
       homeState : false,
       aboutState : false,
-      skillsState : true,
-      projectState : false,
+      skillsState : false,
+      projectState : true,
       internshipState : false,
       contactState : false,
       videoURL : "https://www.dropshots.com/video.php?u=https%3A%2F%2Fstorage04.dropshots.com%2Fphotos6000%2Fphotos%2F1388321%2F20170506%2F070642.mp4"
@@ -172,6 +173,11 @@ class App extends Component {
         {
           this.state.skillsState
             ? <Skills />
+            : null
+        }
+        {
+          this.state.projectState
+            ? <Project />
             : null
         }
         </div>
