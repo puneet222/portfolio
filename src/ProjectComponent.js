@@ -20,6 +20,23 @@ var HelloModal = React.createClass({
   componentWillReceiveProps : function(nextProps) {
     this.setState({visible : nextProps.visible})
   },
+  getImage : function(){
+    return (
+      <ProgressiveImage
+        src={this.props.image}
+        placeholder="Developer"
+        style={{
+          position : "absolute",
+          left : 0,
+          right : 0,
+          height : "20vw",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          padding: '0px'
+        }}
+      />
+    )
+  },
   render: function() {
     // -------------------------  here comes the modal content  ----------------------------------
     var modal_background = (this.state.visible) ? 'ui dimmer modals page transition visible active' : 'ui dimmer modals page transition hidden' ;
@@ -38,31 +55,36 @@ var HelloModal = React.createClass({
         <div className={modal_classes}>
           <div style={{"padding" : "10%"}}>
             <i className="remove circle icon" style={{"position": "absolute" , "color" : "#F44336" , "right" : "10%" , "fontSize" : "1.6em" , "top" : "8%" , "cursor" : "pointer"}} onClick={this.closeModal}></i>
-            <div className="ui grid">
+            <div className="ui grid computer only grid"> {/* ------------------  computer division start --------------------- */}
               <div className="six wide column">
-                <ProgressiveImage
-                  src={this.props.image}
-                  placeholder="Developer"
-                  style={{
-                    position : "absolute",
-                    left : 0,
-                    right : 0,
-                    height : "20vw",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                    padding: '0px'
-                  }}
-                />
+                {this.getImage()}
               </div>
               <div className="ten wide column">
                 <h1 style={{"color" : "white" , "fontSize" : "2.5em" , "textAlign" : "center", "letterSpacing" : "2px" , "fontFamily" : "sans-serif" , "fontWeight" : "100"}}><Fade duration={0.6}>{this.props.name}<span><a href={this.props.link} style={{"fontSize" : "0.8em"}} target="_blank">    <i className="linkify icon"></i></a></span></Fade></h1>
                 <h4 className="homeContent" style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "fontWeight" : "100"}}><Fade duration={0.8}>{this.props.info}</Fade></h4>
-                <h6 style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "right", "letterSpacing" : "1px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "fontStyle" : "italic"}}>{this.props.duration}</h6>
+                <h6 style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "right", "letterSpacing" : "1px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "fontStyle" : "italic" , "margin" : "8%"}}>{this.props.duration}</h6>
                 <div style={{"textAlign" : "right"}}>
                   {languages}
                 </div>
               </div>
-            </div>
+            </div>  {/* ------------------  computer division end --------------------- */}
+            <div className="ui grid mobile only grid tablet only grid" style={{"height" : "80vh" , "overflowY" : "scroll" , "overflowX" : "hidden"}}> {/* ------------------  mobile division  --------------------- */}
+              <div className="two wide column">
+              </div>
+              <div className="twelve wide column" style={{"height" : "20vw"}}>
+                {this.getImage()}
+              </div>
+              <div className="ui grid">
+                <div className="sixteen wide column">
+                  <h1 style={{"color" : "white" , "fontSize" : "1.5em" , "textAlign" : "center", "letterSpacing" : "2px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "marginTop" : "8%"}}><Fade duration={0.6}>{this.props.name}<span><a href={this.props.link} style={{"fontSize" : "0.8em"}} target="_blank">    <i className="linkify icon"></i></a></span></Fade></h1>
+                  <h4 className="homeContent" style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "fontWeight" : "100"}}><Fade duration={0.8}>{this.props.info}</Fade></h4>
+                  <h6 style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "right", "letterSpacing" : "1px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "fontStyle" : "italic"}}>{this.props.duration}</h6>
+                  <div style={{"textAlign" : "right", "marginBottom" : "10%"}}>
+                    {languages}
+                  </div>
+                </div>
+              </div>
+            </div>  {/* ------------------  mobile division end --------------------- */}
           </div>
 
         </div>
@@ -142,7 +164,7 @@ class ProjectComponent extends React.Component {
         languages={this.props.languages}
         />
         <div style={customStyles.div} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
-        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={2000} infiniteLoop={true} onClickItem={this.myFunc} dynamicHeight={true} onClickItem={this.openModal}>
+        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={this.props.interval} infiniteLoop={true} onClickItem={this.myFunc} dynamicHeight={true} onClickItem={this.openModal}>
               {imagesComponent}
         </Carousel>
         </div>

@@ -26,10 +26,12 @@ class ProjectPage extends React.Component {
       if(num % 2 == 0){
         axis = "vertical" ;
       }
+      var interval = Math.floor((Math.random()*1000) + 2000) ;
       let jsxElement = (
         <div className="five wide column" style={{"backgroundColor" : "transparent" , "padding" : "0"}}>
           <ProjectComponent
           axis={axis}
+          interval={interval}
           images={ProjectData[i]["images"]}
           name={ProjectData[i]["name"]}
           info={ProjectData[i]["info"]}
