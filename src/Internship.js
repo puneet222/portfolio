@@ -199,7 +199,7 @@ class InternshipPage extends React.Component {
             <div className="two wide column">
             </div>
             <div className="ui grid"> {/*-----------  inner grid start  ---------------*/}
-              <div className="sixteen wide column">
+              <div className="sixteen wide column" style={{"paddingBottom" : "10vh"}}>
                 {this.getInternshipContent()}
               </div>
             </div>  {/*-----------  inner grid end  ---------------*/}
