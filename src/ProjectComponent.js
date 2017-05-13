@@ -54,7 +54,7 @@ var HelloModal = React.createClass({
       <div className={modal_background}>
         <div className={modal_classes}>
           <div style={{"padding" : "10%"}}>
-            <i className="remove circle icon" style={{"position": "absolute" , "color" : "#F44336" , "right" : "10%" , "fontSize" : "1.6em" , "top" : "8%" , "cursor" : "pointer"}} onClick={this.closeModal}></i>
+            <i className="remove circle icon" style={{"position": "absolute" , "color" : "#F44336" , "right" : "5%" , "fontSize" : "1.6em" , "top" : "8%" , "cursor" : "pointer"}} onClick={this.closeModal}></i>
             <div className="ui grid computer only grid"> {/* ------------------  computer division start --------------------- */}
               <div className="six wide column">
                 {this.getImage()}

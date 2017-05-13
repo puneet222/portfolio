@@ -69,9 +69,9 @@ var Modal = React.createClass({
     return (
       <div className={modal_background}>
         <div className={modal_classes}>
-          <i className="remove circle icon" style={{"position": "absolute" , "color" : "#F44336" , "right" : "10%" , "fontSize" : "1.6em" , "top" : "8%" , "cursor" : "pointer"}} onClick={this.closeModal}></i>
+          <i className="remove circle icon" style={{"position": "absolute" , "color" : "#F44336" , "right" : "5%" , "fontSize" : "1.6em" , "top" : "8%" , "cursor" : "pointer"}} onClick={this.closeModal}></i>
           <div style={{"padding" : "10%"}}>
-            <h1 className="center white homeContent" style={{"fontSize" : "1em"}}>{this.props.info}</h1>
+            <h1 className="center white homeContent" style={{"fontSize" : "1em"}}><Fade duration={0.8}>{this.props.info}</Fade></h1>
             <div className="ui grid computer only grid"> {/*--------------  grid start  ----------------------*/}
               <div className="four wide column">
               </div>
@@ -84,6 +84,7 @@ var Modal = React.createClass({
                 {this.getMobileImage()}
               </div>
             </div>  {/*--------------  grid end  ----------------------*/}
+            <h4 className="center white" style={{"position" : "absolute" , "bottom" : "8%" , "right" : "10%"}}><a href={this.props.link} target="_blank" className="ui teal label">Go to link &nbsp;&nbsp;<i className="share icon"></i></a></h4>
           </div>
         </div>
       </div>
@@ -137,8 +138,7 @@ class InternshipPage extends React.Component {
     )
   }
 
-
-  render() {
+  getInternshipContent() {
     var tags = [] ;
     var colors = ["yellow" , "green" , "red" , "blue" , "pink" , "teal" , "brown" , "grey" , "orange" , "black"] ;
     for(var i = 0 ; i < InternshipData[0]["languages"].length ; i++){
@@ -148,6 +148,18 @@ class InternshipPage extends React.Component {
       )
       tags.push(element) ;
     }
+    return (
+      <div>
+      <h4 className="homeContent center white" style={{"fontSize" : "2em" , "fontWeight" : "400" , "letterSpacing" : "2px"}}>{InternshipData[0]["name"]}  <span><a href={InternshipData[0]["link"]} style={{"fontSize" : "0.8em" , "cursor" : "pointer" , "color" : "orange"}} target="_blank">    <i className="linkify icon"></i></a></span></h4>
+      <h4 className="homeContent center white" style={{"fontSize" : "1em" , "fontWeight" : "100"}}><Fade duration={0.5}>{InternshipData[0]["info"]}</Fade></h4>
+      <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "200" , "letterSpacing" : "2px"}}><i>{InternshipData[0]["duration"]}</i></h4>
+      <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "100" , "letterSpacing" : "1px"}}><span className="right" style={{"fontSize" : "0.5em"}}>{tags}</span></h4>
+      </div>
+    )
+  }
+
+
+  render() {
     return (
       <div className="internshipBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
         <Modal
@@ -173,10 +185,7 @@ class InternshipPage extends React.Component {
               {this.getInternsipLogo("8vw" , "105%")}
             </div>
             <div className="ten wide column">
-              <h4 className="homeContent center white" style={{"fontSize" : "2em" , "fontWeight" : "400" , "letterSpacing" : "2px"}}>{InternshipData[0]["name"]}  <span><a href={InternshipData[0]["link"]} style={{"fontSize" : "0.8em" , "cursor" : "pointer" , "color" : "orange"}} target="_blank">    <i className="linkify icon"></i></a></span></h4>
-              <h4 className="homeContent center white" style={{"fontSize" : "1em" , "fontWeight" : "100"}}><Fade duration={0.5}>{InternshipData[0]["info"]}</Fade></h4>
-              <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "200" , "letterSpacing" : "2px"}}><i>{InternshipData[0]["duration"]}</i></h4>
-              <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "100" , "letterSpacing" : "1px"}}><span className="right" style={{"fontSize" : "0.5em"}}>{tags}</span></h4>
+              {this.getInternshipContent()}
             </div>
             <div className="one wide column">
             </div>
@@ -191,12 +200,7 @@ class InternshipPage extends React.Component {
             </div>
             <div className="ui grid"> {/*-----------  inner grid start  ---------------*/}
               <div className="sixteen wide column">
-                <h4 className="homeContent center white" style={{"fontSize" : "2em" , "fontWeight" : "400" , "letterSpacing" : "2px"}}>{InternshipData[0]["name"]}  <span><a href={InternshipData[0]["link"]} style={{"fontSize" : "0.8em" , "cursor" : "pointer" , "color" : "orange"}} target="_blank">    <i className="linkify icon"></i></a></span></h4>
-                <h4 className="homeContent center white" style={{"fontSize" : "1em" , "fontWeight" : "100"}}><Fade duration={0.5}>{InternshipData[0]["info"]}</Fade></h4>
-                <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "200" , "letterSpacing" : "2px"}}><i>{InternshipData[0]["duration"]}</i></h4>
-                <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "100" , "letterSpacing" : "1px"}}><span className="right" style={{"fontSize" : "0.5em"}}>{tags}</span></h4>
-              </div>
-              <div className="one wide column">
+                {this.getInternshipContent()}
               </div>
             </div>  {/*-----------  inner grid end  ---------------*/}
           </div> {/*---------  mobile grid end -----------*/}
