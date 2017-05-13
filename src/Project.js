@@ -78,7 +78,7 @@ class ProjectPage extends React.Component {
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "1%" , "paddingRight" : "3%" , "width" : "100%"}}>
           <h4 className="righteous" style={{"color" : "#D500F9" , "fontSize" : "4em" , "fontWeight" : "100" , "textAlign" : "center" , "paddingBottom" : "2%"}}><Fade duration={0.9}>Projects</Fade></h4>
-          <div className="ui grid computer only grid" style={{"marginLeft" : "3%"}}>
+          <div className="ui grid computer only grid" style={{"marginLeft" : "3%" , "marginBottom" : "5%"}}>
             {projects}
           </div>
           <div className="ui grid tablet only grid">
