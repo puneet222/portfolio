@@ -38,6 +38,17 @@ body {
 	z-index: 1;
 }
 
+.temporary {
+  background: rgba(0, 0, 0, 1);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: 3;
+}
+
 .tint.homeTint {
   background: rgba(0, 0, 0, 0.8);
 }

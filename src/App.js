@@ -115,6 +115,18 @@ class App extends Component {
     })
   }
 
+  removeDiv = () => {
+    var username = document.getElementById("username").value ;
+    var password = document.getElementById("password").value ;
+    console.log(username , password) ;
+    if(username === "puneet222" && password === "awesome"){
+      document.getElementById("temp").style.display = "none";
+    }
+    else{
+      document.getElementById("error").style.display = "";
+    }
+  }
+
   render() {
     // const { selectedFoods } = this.oldState;
 
@@ -160,6 +172,31 @@ class App extends Component {
 
     return (
       <div className='App'>
+
+        <div className="temporary" id="temp">
+          <div id="temporaryContent" style={{"textAlign" : "center" , "marginTop" : "15vh"}}>
+            <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "10vh" , "fontWeight" : "100"}}>This is the &beta; version</h3>
+            <h3 className="center" style={{"color" : "white" , "fontSize" : "3.5vh" , "fontWeight" : "100"}}>You need an access to view the amazing content</h3>
+            <br />
+            <div className="ui input focus">
+              <input type="text" placeholder="username" id="username" style={{"background" : "transparent" , "color" : "white"}}/>
+            </div>
+            <br />
+            <br />
+            <div className="ui input focus">
+              <input type="password" placeholder="username" id="password" style={{"background" : "transparent" , "color" : "white"}}/>
+            </div>
+            <br />
+            <br />
+            <div className="ui animated fade button" tabIndex="0" onClick={this.removeDiv} style={{"backgroundColor" : "#EF6C00" , "color" : "white"}}>
+              <div className="visible content">Welcome</div>
+              <div className="hidden content">
+                Allow Access
+              </div>
+            </div>
+            <h2 id="error" className="center" style={{"color" : "red" , "fontSize" : "2vh" , "fontWeight" : "100" , "display" : "none"}}>username or password is invalid</h2>
+          </div>
+        </div>
         <div className='ui text container'>
         {
           this.state.homeState
