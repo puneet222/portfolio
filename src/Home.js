@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDriveIn from 'react-drive-in' ;
-import backgroundVideo from '../video/out-5.ogv' ;
+import backgroundVideo from '../video/out-5.mp4' ;
 import backgroundImage from '../images/mobileBack.jpg' ;
 import { bounce } from 'react-animations';
 import Radium from 'radium';
