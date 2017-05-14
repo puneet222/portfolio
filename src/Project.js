@@ -1,9 +1,9 @@
 import React from 'react';
 import { default as Fade } from 'react-fade';
-import Typist from 'react-typist' ;
+// import Typist from 'react-typist' ;
 import ProjectData from './projectMetaData' ;
 import ProjectComponent from './ProjectComponent' ;
-import ProgressiveImage from 'react-progressive-bg-image';
+// import ProgressiveImage from 'react-progressive-bg-image';
 import 'react-typist/dist/Typist.css' ;
 
 class ProjectPage extends React.Component {
@@ -23,7 +23,7 @@ class ProjectPage extends React.Component {
     for(var i = 0 ; i < ProjectData.length ; i++){
       var num = Math.floor((Math.random() * 100) + 1);
       var axis = "horizontal" ;
-      if(num % 2 == 0){
+      if(num % 2 === 0){
         axis = "vertical" ;
       }
       var interval = Math.floor((Math.random()*1000) + 2000) ;

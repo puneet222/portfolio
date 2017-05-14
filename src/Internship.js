@@ -1,6 +1,6 @@
 import React from 'react';
 import { default as Fade } from 'react-fade';
-import Typist from 'react-typist' ;
+// import Typist from 'react-typist' ;
 import ProgressiveImage from 'react-progressive-bg-image';
 import InternshipData from './InternshipMetaData' ;
 import Certification1 from '../images/Internship/certification1.png' ;
@@ -64,8 +64,8 @@ var Modal = React.createClass({
     // -------------------------  here comes the modal content  ----------------------------------
     var modal_background = (this.state.visible) ? 'ui dimmer modals page transition visible active' : 'ui dimmer modals page transition hidden' ;
     var modal_classes = (this.state.visible)? 'active' : 'hidden';
-    var languages = [] ;
-    var colors = ["red" , "teal" , "pink" , "blue" , "orange" , "brown" , "green" , "grey" , "black"] ;
+    // var languages = [] ;
+    // var colors = ["red" , "teal" , "pink" , "blue" , "orange" , "brown" , "green" , "grey" , "black"] ;
     return (
       <div className={modal_background}>
         <div className={modal_classes}>
@@ -149,10 +149,10 @@ class InternshipPage extends React.Component {
       tags.push(element) ;
     }
     return (
-      <div>
+      <div className="green-select">
       <h4 className="homeContent center white" style={{"fontSize" : "2em" , "fontWeight" : "400" , "letterSpacing" : "2px"}}>{InternshipData[0]["name"]}  <span><a href={InternshipData[0]["link"]} style={{"fontSize" : "0.8em" , "cursor" : "pointer" , "color" : "orange"}} target="_blank">    <i className="linkify icon"></i></a></span></h4>
-      <h4 className="homeContent center white" style={{"fontSize" : "1em" , "fontWeight" : "100"}}><Fade duration={0.5}>{InternshipData[0]["info"]}</Fade></h4>
-      <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "200" , "letterSpacing" : "2px"}}><i>{InternshipData[0]["duration"]}</i></h4>
+      <h4 className="homeContent center white" style={{"fontSize" : "1em" , "fontWeight" : "100"}}><Fade duration={1}>{InternshipData[0]["info"]}</Fade></h4>
+      <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "200" , "letterSpacing" : "2px"}}><i className="green-select">{InternshipData[0]["duration"]}</i></h4>
       <h4 className="right white" style={{"fontSize" : "1em" , "fontWeight" : "100" , "letterSpacing" : "1px"}}><span className="right" style={{"fontSize" : "0.5em"}}>{tags}</span></h4>
       </div>
     )

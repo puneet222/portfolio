@@ -3,7 +3,7 @@ import { default as Fade } from 'react-fade';
 import ProgressiveImage from 'react-progressive-bg-image';
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.css' ;
-import Modal from 'react-modal' ;
+// import Modal from 'react-modal' ;
 
 var HelloModal = React.createClass({
   getInitialState: function() {
@@ -129,7 +129,7 @@ class ProjectComponent extends React.Component {
     for(var i = 0 ; i < this.props.images.length ; i++){
       let jsxElement = (
         <div>
-            <img src={this.props.images[i]} />
+            <img src={this.props.images[i]} alt={this.props.name}/>
             {/*<p className="legend">Legend 1</p>*/}
         </div>
       )
@@ -164,7 +164,7 @@ class ProjectComponent extends React.Component {
         languages={this.props.languages}
         />
         <div style={customStyles.div} onMouseOver={this.handleHover} onMouseOut={this.handleOut}>
-        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={this.props.interval} infiniteLoop={true} onClickItem={this.myFunc} dynamicHeight={true} onClickItem={this.openModal}>
+        <Carousel axis={this.props.axis} showThumbs={false} showArrows={false} showIndicators={false} autoPlay={true} interval={this.props.interval} infiniteLoop={true} dynamicHeight={true} onClickItem={this.openModal}>
               {imagesComponent}
         </Carousel>
         </div>

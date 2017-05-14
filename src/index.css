@@ -137,3 +137,22 @@ body {
 .josefinSlab {
   font-family: 'Josefin Slab', serif;
 }
+
+/*-----------------------  different highlight colors for diffrent pages ----------------------*/
+.red-select::selection {
+  background:#F44336;
+  color:#FFF;
+  text-shadow:none;
+}
+
+.red-select::-webkit-selection {
+  background:#F44336;
+  color:#FFF;
+  text-shadow:none;
+}
+
+.red-select::-moz-selection {
+  background:#F44336;
+  color:#FFF;
+  text-shadow:none;
+}
