@@ -124,6 +124,7 @@ class App extends Component {
     }
     else{
       document.getElementById("error").style.display = "";
+      document.getElementById("okay").style.display = "";
     }
   }
 
@@ -175,7 +176,7 @@ class App extends Component {
 
         <div className="temporary" id="temp">
           <div id="temporaryContent" style={{"textAlign" : "center" , "marginTop" : "15vh"}}>
-            <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "10vh" , "fontWeight" : "100"}}>This is the &beta; version</h3>
+            <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "10vh" , "fontWeight" : "100"}}>&beta; version</h3>
             <h3 className="center" style={{"color" : "white" , "fontSize" : "3.5vh" , "fontWeight" : "100"}}>You need an access to view the amazing content</h3>
             <br />
             <div className="ui input focus">
@@ -184,7 +185,7 @@ class App extends Component {
             <br />
             <br />
             <div className="ui input focus">
-              <input type="password" placeholder="username" id="password" style={{"background" : "transparent" , "color" : "white"}}/>
+              <input type="password" placeholder="password" id="password" style={{"background" : "transparent" , "color" : "white"}}/>
             </div>
             <br />
             <br />
@@ -195,6 +196,7 @@ class App extends Component {
               </div>
             </div>
             <h2 id="error" className="center" style={{"color" : "red" , "fontSize" : "2vh" , "fontWeight" : "100" , "display" : "none"}}>username or password is invalid</h2>
+            <h2 id="okay" className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "2.5vh" , "fontWeight" : "100" , "display" : "none"}}>It's okay .It'll be public soon</h2>
           </div>
         </div>
         <div className='ui text container'>
