@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDriveIn from 'react-drive-in' ;
 import backgroundVideo from '../video/out-5.mp4' ;
 import backgroundImage from '../images/mobileBack.jpg' ;
+import desktopBackground from '../images/desktopBackground.png' ;
 import { bounce } from 'react-animations';
 import Radium from 'radium';
 import Typist from 'react-typist' ;
@@ -62,6 +63,19 @@ class HomePage extends React.Component {
         </Typist>
       </div>
         <div className='ui computer only grid'>
+          <ProgressiveImage
+            src={desktopBackground}
+            placeholder="Developer"
+            style={{
+              position : "absolute",
+              left : 0,
+              right : 0,
+              height: 700,
+              zIndex : -1,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+            }}
+          />
           <ReactDriveIn
           show={backgroundVideo}
           poster={backgroundImage}
