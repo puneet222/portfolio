@@ -253,7 +253,7 @@ class SkillsPage extends React.Component {
 
     return (
       <div className="skillsBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
-        <div className="tint">
+        <div className="tint skillsTint">
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "width" : "100%"}}>
           <div className="ui grid computer only grid">

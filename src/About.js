@@ -28,7 +28,7 @@ class AboutPage extends React.Component {
     aboutContent += "I'm also a TV Series addict and love to read novels."
     return (
       <div className="aboutBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
-        <div className="tint">
+        <div className="tint aboutTint">
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "width" : "100%"}}>
           <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em"}}>

@@ -66,7 +66,7 @@ class HomePage extends React.Component {
           show={backgroundVideo}
           poster={backgroundImage}
           />
-          <div className="tint">
+          <div className="tint homeTint">
           </div>
         </div>
         <div className='ui tablet only grid' style={{"marginTop" : "0px"}}>
@@ -83,7 +83,7 @@ class HomePage extends React.Component {
               padding: '0px'
             }}
           />
-          <div className="tint">
+          <div className="tint homeTint">
           </div>
         </div>
         <div className='ui mobile only grid' style={{"marginTop" : "0px"}}>
@@ -99,7 +99,7 @@ class HomePage extends React.Component {
             backgroundPosition: 'center center',
           }}
         />
-          <div className="tint">
+          <div className="tint homeTint">
           </div>
         </div>
       </div>

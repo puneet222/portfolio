@@ -168,7 +168,7 @@ class InternshipPage extends React.Component {
           link={this.state.link}
           info={this.state.info}
         />
-        <div className="tint">
+        <div className="tint internshipTint">
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "1%" , "paddingRight" : "3%" , "width" : "100%"}}>
           {/*---------------------- certification button ---------------------------*/}

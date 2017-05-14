@@ -74,7 +74,7 @@ class ProjectPage extends React.Component {
 
     return (
       <div className="projectBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
-        <div className="tint">
+        <div className="tint projectTint">
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "1%" , "paddingRight" : "3%" , "width" : "100%"}}>
           <h4 className="righteous" style={{"color" : "#D500F9" , "fontSize" : "4em" , "fontWeight" : "100" , "textAlign" : "center" , "paddingBottom" : "2%"}}><Fade duration={0.9}>Projects</Fade></h4>
