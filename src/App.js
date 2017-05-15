@@ -6,6 +6,7 @@ import About from './About' ;
 import Skills from './Skills' ;
 import Project from './Project' ;
 import Internship from './Internship' ;
+import Contact from './Contact' ;
 import classNames from 'classnames';
 
 class App extends Component {
@@ -17,10 +18,29 @@ class App extends Component {
       aboutState : false,
       skillsState : false,
       projectState : false,
-      internshipState : true,
-      contactState : false,
+      internshipState : false,
+      contactState : true,
       videoURL : "https://www.dropshots.com/video.php?u=https%3A%2F%2Fstorage04.dropshots.com%2Fphotos6000%2Fphotos%2F1388321%2F20170506%2F070642.mp4"
     };
+    fetch('https://jsonblob.com/api/jsonBlob/d451ce65-394f-11e7-ae4c-c52c2cbdbc20')
+    .then((response) => response.json())
+    .then((responseJson) => {
+      var users = responseJson.users ;
+      users += 1 ;
+      fetch('https://jsonblob.com/api/jsonBlob/d451ce65-394f-11e7-ae4c-c52c2cbdbc20', {
+        method: 'PUT',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          users : users
+        })
+      })
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
 
   // removeFoodItem = (itemIndex) => {
@@ -226,6 +246,11 @@ class App extends Component {
         {
           this.state.internshipState
             ? <Internship />
+            : null
+        }
+        {
+          this.state.contactState
+            ? <Contact />
             : null
         }
         </div>
