@@ -74,6 +74,9 @@ class AboutPage extends React.Component {
       </div>
     );
   }
+  componentDidMount() {
+    
+  }
 }
 
 export default AboutPage;

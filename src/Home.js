@@ -27,6 +27,9 @@ class HomePage extends React.Component {
     console.log(this.state) ;
   }
 
+  componentWillMount() {
+  }
+
   render() {
     var subHeading1 = "I'm"  ;
     var subHeading2 = "<FullStack />" ;
@@ -119,6 +122,12 @@ class HomePage extends React.Component {
       </div>
     );
   }
+
+  componentDidMount() {
+
+  }
 }
+
+
 
 export default HomePage;

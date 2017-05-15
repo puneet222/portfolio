@@ -176,7 +176,7 @@ class SkillsPage extends React.Component {
   }
 
   componentDidMount() {
-    this.increase();
+      this.increase();
   }
 
   increase() {

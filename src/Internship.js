@@ -208,6 +208,9 @@ class InternshipPage extends React.Component {
       </div>
     );
   }
+  componentDidMount() {
+    
+  }
 }
 
 export default InternshipPage;

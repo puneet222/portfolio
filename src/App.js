@@ -83,6 +83,7 @@ class App extends Component {
   }
 
   handleProjectClick = () => {
+    console.log("project click") ;
     this.setState({
       homeState : false,
       aboutState : false,
@@ -119,6 +120,7 @@ class App extends Component {
     var username = document.getElementById("username").value ;
     var password = document.getElementById("password").value ;
     console.log(username , password) ;
+    document.getElementById("temp").style.display = "none";
     if(username === "puneet222" && password === "awesome"){
       document.getElementById("temp").style.display = "none";
     }
@@ -128,7 +130,12 @@ class App extends Component {
     }
   }
 
+  componentWillMount() {
+
+  }
+
   render() {
+
     // const { selectedFoods } = this.oldState;
 
     var style = {
@@ -275,6 +282,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    document.getElementById("loader").style.display = "none" ;
     var divWidth = document.getElementById("icons").offsetWidth ;
     var windowWidth = window.innerWidth ;
     var leftPadding = (windowWidth-divWidth)/2 ;

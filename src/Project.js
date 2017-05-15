@@ -10,7 +10,6 @@ class ProjectPage extends React.Component {
 
   constructor(props) {
     super(props);
-    console.log(ProjectData) ;
     this.state = {
 
     };
@@ -90,6 +89,8 @@ class ProjectPage extends React.Component {
         </div>
       </div>
     );
+  }
+  componentDidMount() {
   }
 }
 
