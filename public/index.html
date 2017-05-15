@@ -10,8 +10,8 @@
   <body>
     <div id="loader" style="position:absolute; top:0px; bottom:0px; left:0px; right:0px; background-color: #212121; z-index:5 ; text-align: center ; z-index : 5">
       <!-- <h2 class="center" style="color:#00E5FF; font-family:monospace; font-weight:200">Locating the required gigapixels to render...</h2> -->
-      <h2 class="center" style="color:#00E5FF; font-family:monospace; font-weight:100 ; font-size : 2em">Programming the flux capacitor</h2>
-      <h2 class="center" style="color:#00E5FF; font-family:monospace; font-weight:100 ; font-size : 1.5em">Please Wait...</h2>
+      <h2 id="loading_message" class="center" style="color:#00E5FF; font-family:monospace; font-weight:100 ; font-size : 2em">The server is powered by a lemon and two electrodes</h2>
+      <!-- <h2 class="center" style="color:#00E5FF; font-family:monospace; font-weight:100 ; font-size : 1.5em">Please Wait...</h2> -->
       <!-- <div class="progress" style="margin:0px;background:transparent"> -->
         <!-- <div class="indeterminate" style="background-color:#00E5FF"> -->
         <!-- </div> -->
@@ -30,4 +30,16 @@
       To create a production bundle, use `npm run build`.
     -->
   </body>
+  <script type="text/javascript">
+    var messages = ["Programming the flux capacitor" , "640K ought to be enough for anybody" ,"The bits are breeding" , "A few bits tried to escape, but we caught them"] ;
+    messages.push("Checking the gravitational constant in your locale") ;
+    messages.push("It's still faster than you could draw it");
+    messages.push("Calculating Inverse Probability Matrices");
+    messages.push("Decrementing Tectonic Plates");
+    messages.push("Seeding Architecture Simulation Parameters");
+    messages.push("The server is powered by a lemon and two electrodes");
+    var num = Math.floor(Math.random()*10) ;
+    document.getElementById("loading_message").value = messages[num] ;
+    console.log(messages[num]);
+  </script>
 </html>

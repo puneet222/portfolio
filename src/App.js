@@ -57,8 +57,6 @@ class App extends Component {
   }
 
   handleAboutClick = () => {
-    var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", "#BF360C");
     this.setState({
       homeState : false,
       aboutState : true,
@@ -70,8 +68,6 @@ class App extends Component {
   }
 
   handleSkillsClick = () => {
-    var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", "#00E5FF");
     this.setState({
       homeState : false,
       aboutState : false,

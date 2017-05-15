@@ -13,6 +13,11 @@ class AboutPage extends React.Component {
   }
 
   render() {
+    var cursorSpecs = {
+      show : true,
+      element: '_',
+      hideWhenDone: true
+    }
     var shtml = "<html>" ;
     var ehtml = "</html>" ;
     var sbody = "<body>" ;
@@ -50,14 +55,14 @@ class AboutPage extends React.Component {
             {sp}
           </div>
           <div style={{"paddingLeft" : "11%", "marginRight" : "30%"}} className="ui computer only grid tablet only grid">
-            <Typist startDelay={1500}>
-              <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "1.2em"}}>{aboutContent}</span>
+            <Typist className="aboutHeading" startDelay={1500} cursor={cursorSpecs} avgTypingDelay={40}>
+              <span className="homeContent" style={{"color" : "white", "fontWeight" : "100" , "fontSize" : "0.7em"}}>{aboutContent}</span>
             </Typist>
           </div>
           <div style={{"maxHeight" : "70%", "overflowY" : "scroll" , "overflowX" : "hidden", "paddingBottom" : "3%"}} className="ui mobile only grid">
             <div style={{"paddingLeft" : "11%", "marginTop" : "0px" , "height" : "60%"}}>
-              <Typist cursor={{"hideWhenDone" : true}}>
-                <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "0.8em"}}>{aboutContent}</span>
+              <Typist className="aboutHeading" startDelay={1500}  avgTypingDelay={40} cursor={{"element" : "_"}}>
+                <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "0.6em"}}>{aboutContent}</span>
               </Typist>
             </div>
           </div>
@@ -75,7 +80,7 @@ class AboutPage extends React.Component {
     );
   }
   componentDidMount() {
-    
+
   }
 }
 
