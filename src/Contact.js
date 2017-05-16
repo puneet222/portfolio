@@ -1,18 +1,116 @@
 import React from 'react';
 import { default as Fade } from 'react-fade';
+import AlertContainer from 'react-alert'
+import alertImage from '../images/icon.png' ;
 
 class ContactPage extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-
+      whatsappColor : "white",
+      mailColor : "white",
+      facebookColor : "white",
+      linkedinColor : "white",
+      githubColor : "white"
     };
+    this.handleIconHover = this.handleIconHover.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
+  }
+
+  alertOptions = {
+    offset: 14,
+    position: 'top',
+    theme: 'dark',
+    time: 5000,
+    transition: 'scale'
+  }
+
+  showAlert = () => {
+    this.msg.error('Email API Currently not working', {
+      time: 4000,
+      type: 'success'
+    })
+  }
+
+  handleIconHover(obj){
+    this.setState(obj) ;
+  }
+
+  handleMouseOut(){
+    this.setState({
+      whatsappColor : "white",
+      mailColor : "white",
+      facebookColor : "white",
+      linkedinColor : "white",
+      githubColor : "white"
+    });
   }
 
   getMobileLabel(label){
     return (
       <h2 className="handwritingFont left" style={{"color" : "grey" , "fontSize" : "1.5em" , "marginBottom" : "5px"}}>{label}</h2>
+    )
+  }
+
+  getContactInfo(){
+    var whatsappIconStyle = {
+      color : this.state.whatsappColor,
+      fontSize : "1.8em",
+      cursor : "pointer"
+    }
+    var mailIconStyle = {
+      color : this.state.mailColor,
+      fontSize : "1.8em",
+      cursor : "pointer"
+    }
+    var facebookIconStyle = {
+      color : this.state.facebookColor,
+      fontSize : "1.8em",
+      cursor : "pointer"
+    }
+    var linkedinIconStyle = {
+      color : this.state.linkedinColor,
+      fontSize : "1.8em",
+      cursor : "pointer"
+    }
+    var githubIconStyle = {
+      color : this.state.githubColor,
+      fontSize : "1.8em",
+      cursor : "pointer"
+    }
+    return (
+      <div style={{"marginTop" : "5vh" , "marginBottom" : "5vh"}}>
+        <h1 className="righteous" style={{"color" : "white" , "fontWeight" : "100" , "fontSize" : "1.5em" , "color" : "#FF9100" , "textAlign" : "center"}}>Contact Info</h1>
+        <div className="ui grid" style={{"paddingLeft" : "5vw"}}>
+          <div className="three wide column" data-inverted="" data-tooltip="+91 9988182547" data-position="left center" style={{"paddingTop" : "4%"}} onMouseOver={() => this.handleIconHover({whatsappColor : "#34af23"})} onMouseOut={this.handleMouseOut}>
+            <i className="whatsapp icon" style={whatsappIconStyle}></i>
+          </div>
+          <div className="three wide column" style={{"paddingTop" : "4%"}} onMouseOver={() => this.handleIconHover({mailColor : "#ea4335"})} onMouseOut={this.handleMouseOut}>
+            <a href="mailto:aggarwal.puneet222@gmail.com?Subject=Hello%20again" target="_top" ><i className="mail icon" style={mailIconStyle}></i></a>
+          </div>
+          <div className="three wide column" style={{"paddingTop" : "4%"}} onMouseOver={() => this.handleIconHover({facebookColor : "#3b5998"})} onMouseOut={this.handleMouseOut}>
+            <a href="#" target="_blank" ><i className="facebook icon" style={facebookIconStyle}></i></a>
+          </div>
+          <div className="three wide column" style={{"paddingTop" : "4%"}} onMouseOver={() => this.handleIconHover({linkedinColor : "#0077b5"})} onMouseOut={this.handleMouseOut}>
+            <a href="https://www.linkedin.com/in/puneet222/" target="_blank" ><i className="linkedin icon" style={linkedinIconStyle}></i></a>
+          </div>
+          <div className="three wide column" style={{"paddingTop" : "4%"}} onMouseOver={() => this.handleIconHover({githubColor : "#333"})} onMouseOut={this.handleMouseOut}>
+            <a href="https://github.com/puneet222" target="_blank" ><i className="github icon" style={githubIconStyle}></i></a>
+          </div>
+        </div>
+        <div style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "marginTop" : "5vh" , "paddingLeft" : "5vw"}}>
+          <i className="mobile icon" style={{"color" : "white"}}></i>
+          <span>
+          +91 9988182547
+          </span>
+          <br/>
+          <i className="mail outline icon" style={{"color" : "white"}}></i>
+          <span>
+          aggarwal.puneet222@gmail.com
+          </span>
+        </div>
+      </div>
     )
   }
 
@@ -30,6 +128,22 @@ class ContactPage extends React.Component {
        <div className="tint contactTint">
        </div>
        <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "paddingBottom" : "3%" ,  "width" : "100%"}}>
+        <div className="ui computer only grid" style={{"position" : "absolute" , "right" : "4vw" , "top" : "20vh" , "width" : "34vw"}}>
+          <div>
+            <h1 className="righteous" style={{"color" : "white" , "fontWeight" : "100" , "fontSize" : "1.5em" , "color" : "#FF9100"}}>About this website</h1>
+            <p className="josefinSlab" style={{"color" : "white" , "fontSize" : "1em"}}>
+              This website was first created in Angular and then discarded due its comparatively larger reponse time and then website was created in react ,
+              which is a very fast framework and due to this response time of the website is <b> 103ms </b> on average.
+              <br />
+              <span className="homeContent">
+                Hours spend : <b>~125</b>
+                <br />
+                Prototypes made : <b>5</b>
+              </span>
+            </p>
+          </div>{/*----------- end of about the website division  ---------------*/}
+          {this.getContactInfo()}
+        </div>{/*---------------------  end of computer division  --------------------*/}
         <div className="">
          <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em"}}>
            {shtml}
@@ -87,6 +201,7 @@ class ContactPage extends React.Component {
              </span>
            </div>
            <br />
+           <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />{/*-------------------  alert box  -------------------*/}
            <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em", "paddingLeft" : "8%"}}>
              {sbutton}&nbsp;&nbsp;
              <span>
@@ -95,7 +210,7 @@ class ContactPage extends React.Component {
                  <i className="send icon"></i>
                  Send
                </div>
-               <div className="hidden content">
+               <div className="hidden content" onClick={this.showAlert}>
                  <i className="send icon"></i>
                  Send
                </div>
@@ -107,13 +222,16 @@ class ContactPage extends React.Component {
              </span>
              <span>&nbsp;&nbsp;{ebutton}</span>
            </div>
+           <div className="ui tablet only grid mobile only grid">
+            {this.getContactInfo()}
+           </div>
            <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em", "paddingLeft" : "6%"}}>
              {ebody}
            </div>
            <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em"}}>
              {ehtml}
            </div>
-         </div> {/*--------------------  end of computer abd tabket division ----------------*/}
+         </div> {/*--------------------  end of computer and tablet division ----------------*/}
        </div>
       </div>
 

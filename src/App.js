@@ -11,9 +11,10 @@ import classNames from 'classnames';
 
 class App extends Component {
   constructor(props) {
+    var d = new Date().getTime() ;
     super(props);
     this.state = {
-      iconsLeftPadding : 0,
+      responseTime : d,
       homeState : false,
       aboutState : false,
       skillsState : false,
@@ -136,7 +137,6 @@ class App extends Component {
     var username = document.getElementById("username").value ;
     var password = document.getElementById("password").value ;
     console.log(username , password) ;
-    document.getElementById("temp").style.display = "none";
     if(username === "puneet222" && password === "awesome"){
       document.getElementById("temp").style.display = "none";
     }
@@ -199,6 +199,7 @@ class App extends Component {
 
         <div className="temporary" id="temp">
           <div id="temporaryContent" style={{"textAlign" : "center" , "marginTop" : "15vh"}}>
+            <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "4vh" , "fontWeight" : "100"}}>Resonse Time : {this.state.responseTime}ms</h3>
             <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "10vh" , "fontWeight" : "100"}}>&beta; version</h3>
             <h3 className="center" style={{"color" : "white" , "fontSize" : "3.5vh" , "fontWeight" : "100"}}>You need an access to view the amazing content</h3>
             <br />
@@ -303,11 +304,10 @@ class App extends Component {
   }
 
   componentDidMount() {
+    var d = new Date().getTime() ;
+    var temp = this.state.responseTime ;
+    this.setState({responseTime : d-temp}) ;
     document.getElementById("loader").style.display = "none" ;
-    var divWidth = document.getElementById("icons").offsetWidth ;
-    var windowWidth = window.innerWidth ;
-    var leftPadding = (windowWidth-divWidth)/2 ;
-    // this.setState({iconsLeftPadding : leftPadding});
   }
 }
 
