@@ -15,12 +15,12 @@ class App extends Component {
     super(props);
     this.state = {
       responseTime : d,
-      homeState : false,
+      homeState : true,
       aboutState : false,
       skillsState : false,
       projectState : false,
       internshipState : false,
-      contactState : true,
+      contactState : false,
       videoURL : "https://www.dropshots.com/video.php?u=https%3A%2F%2Fstorage04.dropshots.com%2Fphotos6000%2Fphotos%2F1388321%2F20170506%2F070642.mp4"
     };
     fetch('https://jsonblob.com/api/jsonBlob/d451ce65-394f-11e7-ae4c-c52c2cbdbc20')
