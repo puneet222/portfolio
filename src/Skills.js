@@ -10,7 +10,96 @@ import { default as Fade } from 'react-fade'
 import kongImage from '../images/logo/kong.png' ;
 import pythonImage from '../images/logo/python.png' ;
 import rImage from '../images/logo/r.png' ;
-import Img from 'react-image'
+import Img from 'react-image' ;
+import ProgressiveImage from 'react-progressive-bg-image';
+import Certification1 from '../images/Internship/certification1.png' ;
+
+var Modal = React.createClass({
+  getInitialState: function() {
+    return {
+      visible: this.props.visible,
+      certificate: this.props.certificate,
+      link: this.props.link,
+      info: this.props.info
+    };
+  },
+  closeModal : function(){
+    this.setState({visible : false})
+  },
+  componentDidMount: function() {
+
+  },
+  componentWillReceiveProps : function(nextProps) {
+    this.setState({visible : nextProps.visible , certificate: nextProps.certificate , link : nextProps.link , info : nextProps.link})
+  },
+  getComputerImage : function(){
+    return (
+      <ProgressiveImage
+        src={this.state.certificate}
+        placeholder="Developer"
+        style={{
+          position : "absolute",
+          left : 0,
+          right : 0,
+          height : "30vw",
+          width : "40vw" ,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          padding: '0px'
+        }}
+      />
+    )
+  },
+  getMobileImage : function(){
+    return (
+      <ProgressiveImage
+        src={this.state.certificate}
+        placeholder="Developer"
+        style={{
+          position : "absolute",
+          left : 0,
+          right : 0,
+          height : "50vh",
+          width : "100%" ,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          padding: '0px'
+        }}
+      />
+    )
+  },
+  render: function() {
+    // -------------------------  here comes the modal content  ----------------------------------
+    var modal_background = (this.state.visible) ? 'ui dimmer modals page transition visible active' : 'ui dimmer modals page transition hidden' ;
+    var modal_classes = (this.state.visible)? 'active' : 'hidden';
+    // var languages = [] ;
+    // var colors = ["red" , "teal" , "pink" , "blue" , "orange" , "brown" , "green" , "grey" , "black"] ;
+    return (
+      <div className={modal_background}>
+        <div className={modal_classes}>
+          <i className="remove circle icon" style={{"position": "absolute" , "color" : "#F44336" , "right" : "5%" , "fontSize" : "1.6em" , "top" : "8%" , "cursor" : "pointer"}} onClick={this.closeModal}></i>
+          <div style={{"padding" : "10%"}}>
+            <h1 className="center white homeContent" style={{"fontSize" : "1em"}}><Fade duration={0.8}>{this.props.info}</Fade></h1>
+            <div className="ui grid computer only grid"> {/*--------------  grid start  ----------------------*/}
+              <div className="four wide column">
+              </div>
+              <div className="twelve wide column">
+                {this.getComputerImage()}
+              </div>
+            </div>  {/*--------------  grid end  ----------------------*/}
+            <div className="ui grid mobile only grid tablet only grid"> {/*--------------  grid start  ----------------------*/}
+              <div className="sixteen wide column">
+                {this.getMobileImage()}
+              </div>
+            </div>  {/*--------------  grid end  ----------------------*/}
+            <h4 className="center white" style={{"position" : "absolute" , "bottom" : "8%" , "right" : "10%"}}><a href={this.props.link} target="_blank" className="ui orange label">Go to link &nbsp;&nbsp;<i className="share icon"></i></a></h4>
+          </div>
+        </div>
+      </div>
+    );
+  }
+});
+
 
 class SkillsPage extends React.Component {
 
@@ -32,9 +121,28 @@ class SkillsPage extends React.Component {
       java : 0,
       bootstrap : 0,
       semantic : 0,
-      git : 0
+      git : 0,
+      visible : false,
+      certificate : Certification1,
+      link : "https://www.freecodecamp.com/puneet222/front-end-certification",
+      info : "Free Code Camp Front-End Development Certificate",
     };
     this.increase = this.increase.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.viewCertification = this.viewCertification.bind(this) ;
+    this.viewInternshipCertificate = this.viewInternshipCertificate.bind(this) ;
+  }
+
+  openModal(){
+    this.setState({visible : true});
+  }
+
+  viewInternshipCertificate(){
+
+  }
+
+  viewCertification(){
+    this.setState({visible : true}) ;
   }
 
   styles = {
@@ -253,9 +361,21 @@ class SkillsPage extends React.Component {
 
     return (
       <div className="skillsBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
+        <Modal
+          visible={this.state.visible}
+          certificate={this.state.certificate}
+          link={this.state.link}
+          info={this.state.info}
+        />
         <div className="tint skillsTint">
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "width" : "100%"}}>
+        {/*---------------------- certification button ---------------------------*/}
+        <div style={{"position" : "fixed" , "bottom" : "3.5em" , "right" : "4vw" , "zIndex" : "3"}} data-tooltip="Certifications" data-inverted="" data-position="left center">
+          <button className="circular ui icon button" style={{"fontSize" : "4vh" , "backgroundColor" : "#00E5FF" , "color" : "white"}} onClick={this.viewCertification}>
+            <i className="certificate icon"></i>
+          </button>
+        </div>
           <div className="ui grid computer only grid">
             <div className="eight wide column">
               <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em"}}>
@@ -268,7 +388,7 @@ class SkillsPage extends React.Component {
                 {sh1}
               </div>
               <div style={{"paddingLeft" : "1%"}}>
-                <span className="righteous" style={{"color" : "#00E5FF" , "fontSize" : "3.5em", "paddingLeft" : "0%" , "paddingRight" : "0%"}}><Fade duration={0.9}>Skills & Experience</Fade></span>
+                <span className="righteous" style={{"color" : "#00E5FF" , "fontSize" : "3.5em", "paddingLeft" : "0%" , "paddingRight" : "0%"}}><Fade duration={0.9}>Superpowers</Fade></span>
               </div>
               <div className="handwritingFont" style={{"color" : "#424242","fontSize" : "1.2em", "paddingLeft" : "9%"}}>
                 {eh1}
@@ -298,7 +418,7 @@ class SkillsPage extends React.Component {
           </div>{/* -------------------------- end of computer division ----------------------*/}
           <div className="ui grid mobile only grid tablet only grid">    {/* -------------------------- start of mobile and tablet division ----------------------*/}
             <div className="sixteen wide column" style={{"paddingTop" : "0"}}>
-              <h4 className="righteous" style={{"color" : "#00E5FF" , "fontSize" : "11vw" , "fontWeight" : "100"}}><Fade duration={0.9}>Skills & Experience</Fade></h4>
+              <h4 className="righteous" style={{"color" : "#00E5FF" , "fontSize" : "11vw" , "fontWeight" : "100", "textAlign" : "center"}}><Fade duration={0.9}>Superpowers</Fade></h4>
             </div>
           </div>  {/* -------------------------- end of mobile and tablet division ----------------------*/}
           <div className="ui tablet only grid" style={{"marginTop" : "10vh"}}> {/*---------------------  start of table division  ------------------------ */}

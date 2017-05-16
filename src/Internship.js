@@ -172,11 +172,11 @@ class InternshipPage extends React.Component {
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "1%" , "paddingRight" : "3%" , "width" : "100%"}}>
           {/*---------------------- certification button ---------------------------*/}
-          <div style={{"position" : "fixed" , "bottom" : "3.5em" , "right" : "4vw" , "zIndex" : "3"}} data-tooltip="Certifications" data-inverted="" data-position="left center">
+          {/*<div style={{"position" : "fixed" , "bottom" : "3.5em" , "right" : "4vw" , "zIndex" : "3"}} data-tooltip="Certifications" data-inverted="" data-position="left center">
             <button className="circular ui icon button" style={{"fontSize" : "4vh" , "backgroundColor" : "#FF9100" , "color" : "white"}} onClick={this.viewCertification}>
               <i className="certificate icon"></i>
             </button>
-          </div>
+          </div>*/}
           <h4 className="righteous" style={{"color" : "#FF9100" , "fontSize" : "3.5em" , "fontWeight" : "100" , "textAlign" : "center" , "paddingBottom" : "2%"}}><Fade duration={0.9}>Internships</Fade></h4>
           <div className="ui grid computer only grid tablet only grid"> {/*---------  computer tablet grid start -----------*/}
             <div className="one wide column">
@@ -209,7 +209,7 @@ class InternshipPage extends React.Component {
     );
   }
   componentDidMount() {
-    
+
   }
 }
 
