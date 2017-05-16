@@ -254,7 +254,7 @@ class App extends Component {
             : null
         }
         </div>
-        <div className="ui inverted segment" id="footer">
+        <div className="ui inverted segment" id="footer" style={{"textAlign" : "center"}}>
         {/* ------------------------------  this is division for computer and tablets ------------------------------- */}
           <div className="ui compact inverted secondary pointing menu computer only grid tablet only grid">
             <a className={homeClass} onClick={this.handleHomeClick}>
@@ -307,7 +307,7 @@ class App extends Component {
     var divWidth = document.getElementById("icons").offsetWidth ;
     var windowWidth = window.innerWidth ;
     var leftPadding = (windowWidth-divWidth)/2 ;
-    this.setState({iconsLeftPadding : leftPadding});
+    // this.setState({iconsLeftPadding : leftPadding});
   }
 }
 
