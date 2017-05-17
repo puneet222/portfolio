@@ -80,7 +80,7 @@ class ContactPage extends React.Component {
       cursor : "pointer"
     }
     return (
-      <div style={{"marginTop" : "5vh" , "marginBottom" : "10vh"}}>
+      <div style={{"marginTop" : "5vh" , "marginBottom" : "10vh" , "width" : "100%"}}>
         <h1 className="righteous" style={{"fontWeight" : "100" , "fontSize" : "1.5em" , "color" : "#FF9100" , "textAlign" : "center"}}>Contact Info</h1>
         <div className="ui grid" style={{"paddingLeft" : "4vw"}}>
           <div className="three wide column" data-inverted="" data-tooltip="+91 9988182547" data-position="left center" style={{"paddingTop" : "4%"}} onMouseOver={() => this.handleIconHover({whatsappColor : "#34af23"})} onMouseOut={this.handleMouseOut}>
@@ -128,7 +128,7 @@ class ContactPage extends React.Component {
        <div className="tint contactTint">
        </div>
        <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "paddingBottom" : "3%" ,  "width" : "100%"}}>
-        <div className="ui computer only grid" style={{"position" : "absolute" , "right" : "4vw" , "top" : "20vh" , "width" : "34vw"}}>
+        <div className="ui computer only grid" style={{"position" : "absolute" , "right" : "4vw" , "top" : "22vh" , "width" : "34vw"}}>
           <div>
             <h1 className="righteous" style={{"fontWeight" : "100" , "fontSize" : "1.5em" , "color" : "#FF9100"}}>About this website</h1>
             <p className="josefinSlab" style={{"color" : "white" , "fontSize" : "1em"}}>
