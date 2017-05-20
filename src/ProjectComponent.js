@@ -37,14 +37,14 @@ var HelloModal = React.createClass({
       />
     )
   },
-  style = {
+  styles : {
     infoDiv : {
       "color" : "white" ,
       "fontSize" : "1em" ,
       "textAlign" : "center" ,
       "fontWeight" : "100"
     }
-  }
+  },
   render: function() {
     // -------------------------  here comes the modal content  ----------------------------------
     var modal_background = (this.state.visible) ? 'ui dimmer modals page transition visible active' : 'ui dimmer modals page transition hidden' ;
