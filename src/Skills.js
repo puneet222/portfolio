@@ -355,9 +355,9 @@ class SkillsPage extends React.Component {
     var eh1 = "</h1>" ;
     var sp = "<p>" ;
     var ep = "</p>" ;
-    var skillsInfo = "These are all my skills and experience that I gain by working on wide varieties of projects." ;
-    skillsInfo += " I always like to learn new skills and try to impelement." ;
-    skillsInfo += "  And I also tyr to keep myself updated with all new Technologies." ;
+    var skillsInfo = "These are all my skills and experience that I gain by working on wide varities of projects." ;
+    skillsInfo += " I always like to learn new skills and try to implement." ;
+    skillsInfo += "  And I also try to keep myself updated with all new Technologies." ;
 
     return (
       <div className="skillsBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>

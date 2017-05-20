@@ -31,7 +31,7 @@ class HomePage extends React.Component {
   }
 
   render() {
-    var subHeading1 = "I'm"  ;
+    var subHeading1 = "I'm a"  ;
     var subHeading2 = "<FullStack />" ;
     var subheading3 = "Developer" ;
     var subHeadingClass = classNames({
