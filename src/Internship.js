@@ -166,6 +166,13 @@ class InternshipPage extends React.Component {
       "paddingTop" : "1%" ,
       "paddingRight" : "3%" ,
       "width" : "100%"
+    },
+    headingStyle : {
+      "color" : "#FF9100" ,
+      "fontSize" : "3.5em" ,
+      "fontWeight" : "100" ,
+      "textAlign" : "center" ,
+      "paddingBottom" : "2%"
     }
   }
 
@@ -188,7 +195,7 @@ class InternshipPage extends React.Component {
               <i className="certificate icon"></i>
             </button>
           </div>*/}
-          <h4 className="righteous" style={{"color" : "#FF9100" , "fontSize" : "3.5em" , "fontWeight" : "100" , "textAlign" : "center" , "paddingBottom" : "2%"}}><Fade duration={0.9}>Internships</Fade></h4>
+          <h4 className="righteous" style={this.styles.headingStyle}><Fade duration={0.9}>Internships</Fade></h4>
           <div className="ui grid computer only grid tablet only grid"> {/*---------  computer tablet grid start -----------*/}
             <div className="one wide column">
             </div>

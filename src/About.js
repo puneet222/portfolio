@@ -29,6 +29,12 @@ class AboutPage extends React.Component {
       "color" : "#424242",
       "fontSize" : "1.2em",
       "paddingLeft" : "6%"
+    },
+    mobileDiv : {
+      "maxHeight" : "70%",
+      "overflowY" : "scroll" ,
+      "overflowX" : "hidden",
+      "paddingBottom" : "3%"
     }
   }
 
@@ -79,7 +85,7 @@ class AboutPage extends React.Component {
               <span className="homeContent" style={{"color" : "white", "fontWeight" : "100" , "fontSize" : "0.7em"}}>{aboutContent}</span>
             </Typist>
           </div>
-          <div style={{"maxHeight" : "70%", "overflowY" : "scroll" , "overflowX" : "hidden", "paddingBottom" : "3%"}} className="ui mobile only grid">
+          <div style={this.styles.mobileDiv} className="ui mobile only grid">
             <div style={{"paddingLeft" : "11%", "marginTop" : "0px" , "height" : "60%"}}>
               <Typist className="aboutHeading" startDelay={1500}  avgTypingDelay={40} cursor={{"element" : "_"}}>
                 <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "0.6em"}}>{aboutContent}</span>

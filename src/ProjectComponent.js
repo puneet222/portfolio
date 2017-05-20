@@ -37,6 +37,14 @@ var HelloModal = React.createClass({
       />
     )
   },
+  style = {
+    infoDiv : {
+      "color" : "white" ,
+      "fontSize" : "1em" ,
+      "textAlign" : "center" ,
+      "fontWeight" : "100"
+    }
+  }
   render: function() {
     // -------------------------  here comes the modal content  ----------------------------------
     var modal_background = (this.state.visible) ? 'ui dimmer modals page transition visible active' : 'ui dimmer modals page transition hidden' ;
@@ -61,7 +69,7 @@ var HelloModal = React.createClass({
               </div>
               <div className="ten wide column">
                 <h1 style={{"color" : "white" , "fontSize" : "2.5em" , "textAlign" : "center", "letterSpacing" : "2px" , "fontFamily" : "sans-serif" , "fontWeight" : "100"}}><Fade duration={0.6}>{this.props.name}<span><a href={this.props.link} style={{"fontSize" : "0.8em"}} target="_blank">    <i className="linkify icon"></i></a></span></Fade></h1>
-                <h4 className="homeContent" style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "fontWeight" : "100"}}><Fade duration={0.8}>{this.props.info}</Fade></h4>
+                <h4 className="homeContent" style={this.styles.infoDiv}><Fade duration={0.8}>{this.props.info}</Fade></h4>
                 <h6 style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "right", "letterSpacing" : "1px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "fontStyle" : "italic" , "margin" : "8%"}}>{this.props.duration}</h6>
                 <div style={{"textAlign" : "right"}}>
                   {languages}
@@ -77,7 +85,7 @@ var HelloModal = React.createClass({
               <div className="ui grid">
                 <div className="sixteen wide column">
                   <h1 style={{"color" : "white" , "fontSize" : "1.5em" , "textAlign" : "center", "letterSpacing" : "2px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "marginTop" : "8%"}}><Fade duration={0.6}>{this.props.name}<span><a href={this.props.link} style={{"fontSize" : "0.8em"}} target="_blank">    <i className="linkify icon"></i></a></span></Fade></h1>
-                  <h4 className="homeContent" style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "fontWeight" : "100"}}><Fade duration={0.8}>{this.props.info}</Fade></h4>
+                  <h4 className="homeContent" style={this.styles.infoDiv}><Fade duration={0.8}>{this.props.info}</Fade></h4>
                   <h6 style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "right", "letterSpacing" : "1px" , "fontFamily" : "sans-serif" , "fontWeight" : "100" , "fontStyle" : "italic"}}>{this.props.duration}</h6>
                   <div style={{"textAlign" : "right", "marginBottom" : "10%"}}>
                     {languages}
