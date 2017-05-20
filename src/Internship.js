@@ -158,10 +158,21 @@ class InternshipPage extends React.Component {
     )
   }
 
+  styles = {
+    divContainer : {
+      "position":"absolute",
+      "zIndex" : 2,
+      "paddingLeft" : "3%" ,
+      "paddingTop" : "1%" ,
+      "paddingRight" : "3%" ,
+      "width" : "100%"
+    }
+  }
+
 
   render() {
     return (
-      <div className="internshipBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
+      <div className="internshipBackground divBackground">
         <Modal
           visible={this.state.visible}
           certificate={this.state.certificate}
@@ -170,7 +181,7 @@ class InternshipPage extends React.Component {
         />
         <div className="tint internshipTint">
         </div>
-        <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "1%" , "paddingRight" : "3%" , "width" : "100%"}}>
+        <div style={this.styles.divContainer}>
           {/*---------------------- certification button ---------------------------*/}
           {/*<div style={{"position" : "fixed" , "bottom" : "3.5em" , "right" : "4vw" , "zIndex" : "3"}} data-tooltip="Certifications" data-inverted="" data-position="left center">
             <button className="circular ui icon button" style={{"fontSize" : "4vh" , "backgroundColor" : "#FF9100" , "color" : "white"}} onClick={this.viewCertification}>

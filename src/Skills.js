@@ -360,7 +360,7 @@ class SkillsPage extends React.Component {
     skillsInfo += "  And I also try to keep myself updated with all new Technologies." ;
 
     return (
-      <div className="skillsBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
+      <div className="skillsBackground divBackground">
         <Modal
           visible={this.state.visible}
           certificate={this.state.certificate}

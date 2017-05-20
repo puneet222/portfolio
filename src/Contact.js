@@ -124,7 +124,7 @@ class ContactPage extends React.Component {
     var sbutton = "<button>" ;
     var ebutton = "</button>" ;
     return (
-      <div className="contactBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
+      <div className="contactBackground divBackground">
        <div className="tint contactTint">
        </div>
        <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "3%" , "paddingRight" : "3%" , "paddingBottom" : "3%" ,  "width" : "100%"}}>
@@ -133,7 +133,7 @@ class ContactPage extends React.Component {
             <h1 className="righteous" style={{"fontWeight" : "100" , "fontSize" : "1.5em" , "color" : "#FF9100"}}>About this website</h1>
             <p className="josefinSlab" style={{"color" : "white" , "fontSize" : "1em"}}>
               This website was first created in Angular and then discarded due its comparatively larger reponse time and then website was created in react ,
-              which is a very fast framework and due to this response time of the website is <b> 103ms </b> on average.
+              which is a very fast framework and due to this response time of the website is <b> ~300ms </b> on average.
               <br />
               <span className="homeContent">
                 Hours spend : <b>~125</b>
@@ -196,8 +196,10 @@ class ContactPage extends React.Component {
            <div className="handwritingFont inlineGrid" style={{"color" : "#424242","fontSize" : "1.2em", "paddingLeft" : "8%"}}>
              <span className="josefinSlab center" style={{"color" : "white" , "textAlign" : "left" , "marginBottom" : "2vh"}}><b>Message&nbsp;&nbsp;</b></span>
                 <span>
-                 <textarea className="ui computer only grid tablet only grid" style={{"position" : "relative" , "left" : "4%" , "background" : "transparent" , "color" : "white" , "padding" : "0.5vw" , "width" : "35vw" , "borderRadius" : "5px" , "borderColor" : "#85b7d9" , "fontWeight" : "100" , "fontFamily" : "serif"}}></textarea>
-                 <textarea className="ui mobile only grid" style={{"position" : "relative" , "left" : "6%" , "bottom" : "20%" , "background" : "transparent" , "color" : "white" , "padding" : "1.5vw" , "width" : "80vw" , "borderRadius" : "5px" , "borderColor" : "#85b7d9" , "fontWeight" : "100" , "fontFamily" : "serif"}}></textarea>
+                 <div>
+                  <textarea className="ui computer only grid tablet only grid" style={{"position" : "relative" , "left" : "4%" , "background" : "transparent" , "color" : "white" , "padding" : "0.5vw" , "width" : "35vw" , "borderRadius" : "5px" , "borderColor" : "#85b7d9" , "fontWeight" : "100" , "fontFamily" : "serif"}}></textarea>
+                  <textarea className="ui mobile only grid" style={{"position" : "relative" , "left" : "6%" , "bottom" : "20%" , "background" : "transparent" , "color" : "white" , "padding" : "1.5vw" , "width" : "80vw" , "borderRadius" : "5px" , "borderColor" : "#85b7d9" , "fontWeight" : "100" , "fontFamily" : "serif"}}></textarea>
+                 </div>
                 </span>
            </div>
            <br />

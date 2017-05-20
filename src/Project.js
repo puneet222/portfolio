@@ -72,7 +72,7 @@ class ProjectPage extends React.Component {
     }
 
     return (
-      <div className="projectBackground" style={{"position" : "absolute", "left" : 0 , "right" : 0 , "top" : 0 , "bottom" : 0 , "overflowY" : "scroll" , "overflowX" : "hidden"}}>
+      <div className="projectBackground divBackground">
         <div className="tint projectTint">
         </div>
         <div style={{"position":"absolute","zIndex" : 2,"paddingLeft" : "3%" , "paddingTop" : "1%" , "paddingRight" : "3%" , "width" : "100%"}}>

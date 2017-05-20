@@ -85,7 +85,7 @@ class HomePage extends React.Component {
           <div className="tint homeTint">
           </div>
         </div>
-        <div className='ui tablet only grid' style={{"marginTop" : "0px"}}>
+        <div className='ui tablet only grid topZero'>
           <ProgressiveImage
             src={backgroundImage}
             placeholder="Developer"
@@ -102,7 +102,7 @@ class HomePage extends React.Component {
           <div className="tint homeTint">
           </div>
         </div>
-        <div className='ui mobile only grid' style={{"marginTop" : "0px"}}>
+        <div className='ui mobile only grid topZero'>
         <ProgressiveImage
           src={backgroundImage}
           placeholder="Developer"
