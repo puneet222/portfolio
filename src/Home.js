@@ -60,7 +60,7 @@ class HomePage extends React.Component {
       <div>
       <div className="ui center aligned" style={styles}>
         <h1 className="homeContent largerFont"><Fade duration={1.2}>puneet222.github.io</Fade></h1>
-        <Typist className="homeHeading" avgTypingDelay={170} startDelay={1500} onTypingDone={this.tabRight} cursor={cursorSpecs} >
+        <Typist className="homeHeading" avgTypingDelay={170} startDelay={2000} onTypingDone={this.tabRight} cursor={cursorSpecs} >
           <span style={{"fontSize":"0.8em" , "color" : "white"}} className={subHeadingClass}>{subHeading1} <span style={{"color" : "#FF1744"}}> {subHeading2} </span> {subheading3}</span>
         </Typist>
       </div>
@@ -108,6 +108,7 @@ class HomePage extends React.Component {
           placeholder="Developer"
           style={{
             position : "absolute",
+            top : 0,
             left : 0,
             right : 0,
             height: 700,

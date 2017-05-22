@@ -28,7 +28,15 @@ class ContactPage extends React.Component {
 
   showAlert = () => {
     this.msg.error('Email API Currently not working', {
-      time: 4000,
+      time: 3000,
+      type: 'success'
+    })
+    this.msg.info('For the time being, email address is provided', {
+      time: 5000,
+      type: 'success'
+    })
+    this.msg.info('You can ping me.', {
+      time: 6000,
       type: 'success'
     })
   }
@@ -102,7 +110,7 @@ class ContactPage extends React.Component {
         <div style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "marginTop" : "5vh" , "paddingLeft" : "1vw"}}>
           <i className="mobile icon" style={{"color" : "white"}}></i>
           <span>
-          +91 9988182547
+          +91 7888648035
           </span>
           <br/>
           <i className="mail outline icon" style={{"color" : "white"}}></i>
@@ -112,6 +120,22 @@ class ContactPage extends React.Component {
         </div>
       </div>
     )
+  }
+
+  styles = {
+    inputStyles : {
+      "background" : "transparent" ,
+      "color" : "white" ,
+      "padding" : "0.5vw" ,
+      "width" : "35vw"
+    },
+    innerInputStyles : {
+      "background" : "transparent" ,
+      "color" : "white" ,
+      "padding" : "1.5vw" ,
+      "width" : "80vw" ,
+      "marginTop" : "0"
+    }
   }
 
   render() {
@@ -164,8 +188,8 @@ class ContactPage extends React.Component {
              <span className="josefinSlab" style={{"color" : "white"}}><b>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> </span>
              <span>
                <div className="ui input focus">
-                 <input className="ui computer only grid tablet only grid" style={{"background" : "transparent" , "color" : "white" , "padding" : "0.5vw" , "width" : "35vw"}} type="text" placeholder="Name" />
-                 <input className="ui mobile only grid" style={{"background" : "transparent" , "color" : "white" , "padding" : "1.5vw" , "width" : "80vw" , "marginTop" : "0"}} type="text" placeholder="Name" />
+                 <input className="ui computer only grid tablet only grid" style={this.styles.inputStyles} type="text" placeholder="Name" />
+                 <input className="ui mobile only grid" style={this.styles.innerInputStyles} type="text" placeholder="Name" />
                </div>
              </span>
              <span></span>
@@ -175,8 +199,8 @@ class ContactPage extends React.Component {
              <span className="josefinSlab" style={{"color" : "white"}}><b>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> </span>
              <span>
                <div className="ui input focus" style={{"paddingLeft" : "0.2%"}}>
-                 <input className="ui computer only grid tablet only grid" style={{"background" : "transparent" , "color" : "white" , "padding" : "0.5vw" , "width" : "35vw"}} type="text" placeholder="Email" />
-                 <input className="ui mobile only grid" style={{"background" : "transparent" , "color" : "white" , "padding" : "1.5vw" , "width" : "80vw" , "marginTop" : "0"}} type="text" placeholder="Email" />
+                 <input className="ui computer only grid tablet only grid" style={this.styles.inputStyles} type="text" placeholder="Email" />
+                 <input className="ui mobile only grid" style={this.styles.innerInputStyles} type="text" placeholder="Email" />
                </div>
              </span>
              <span></span>
@@ -186,8 +210,8 @@ class ContactPage extends React.Component {
              <span className="josefinSlab" style={{"color" : "white"}}><b>Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> </span>
              <span>
                <div className="ui input focus">
-                 <input className="ui computer only grid tablet only grid" style={{"background" : "transparent" , "color" : "white" , "padding" : "0.5vw" , "width" : "35vw"}} type="text" placeholder="Subject" />
-                 <input className="ui mobile only grid" style={{"background" : "transparent" , "color" : "white" , "padding" : "1.5vw" , "width" : "80vw" , "marginTop" : "0"}} type="text" placeholder="Subject" />
+                 <input className="ui computer only grid tablet only grid" style={this.styles.inputStyles} type="text" placeholder="Subject" />
+                 <input className="ui mobile only grid" style={this.styles.innerInputStyles} type="text" placeholder="Subject" />
                </div>
              </span>
              <span></span>

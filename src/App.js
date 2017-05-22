@@ -197,9 +197,9 @@ class App extends Component {
     return (
       <div className='App'>
 
-        <div className="temporary" id="temp">
+        {/*<div className="temporary" id="temp">
           <div id="temporaryContent" style={{"textAlign" : "center" , "marginTop" : "15vh"}}>
-            <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "4vh" , "fontWeight" : "100"}}>Response Time : {this.state.responseTime}ms</h3>
+            <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "4vh" , "fontWeight" : "100"}}>Resonse Time : {this.state.responseTime}ms</h3>
             <h3 className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "10vh" , "fontWeight" : "100"}}>&beta; version</h3>
             <h3 className="center" style={{"color" : "white" , "fontSize" : "3.5vh" , "fontWeight" : "100"}}>You need an access to view the amazing content</h3>
             <br />
@@ -222,7 +222,7 @@ class App extends Component {
             <h2 id="error" className="center" style={{"color" : "red" , "fontSize" : "2vh" , "fontWeight" : "100" , "display" : "none"}}>username or password is invalid</h2>
             <h2 id="okay" className="center homeContent" style={{"color" : "#00E5FF" , "fontSize" : "2.5vh" , "fontWeight" : "100" , "display" : "none"}}>It's okay .It'll be public soon</h2>
           </div>
-        </div>
+        </div>*/}
         <div className='ui text container'>
         {
           this.state.homeState
