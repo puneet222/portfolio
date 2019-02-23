@@ -1,7 +1,7 @@
 import React from 'react';
 import { default as Fade } from 'react-fade';
 import Typist from 'react-typist' ;
-import 'react-typist/dist/Typist.css' ;
+import '../node_modules/react-typist/dist/Typist.css' ;
 
 class AboutPage extends React.Component {
 
@@ -52,11 +52,14 @@ class AboutPage extends React.Component {
     var eh1 = "</h1>" ;
     var sp = "<p>" ;
     var ep = "</p>" ;
-    var aboutContent = "Hello! My name is Puneet Aggarwal. " ;
-    aboutContent += "Currently I'm pursuing B.E. (Computer Science) from PEC University of Technology, Chandigarh. "
-    aboutContent += "I'm very enthusiastic about web development, and always very interested to learn about latest technologies. "
-    aboutContent += "I also like to read blogs and sometimes in my free time I use to do sketching, painting. "
-    aboutContent += "I'm also a TV Series addict and love to read novels."
+    var company = "Morgan Stanley" ;
+    var role = "UI Developer" ;
+    var technology = "Angular" ;
+    var aboutContent1 = "Hello! My name is Puneet Aggarwal. " ;
+    var aboutContent2 =  "I did my B.E. in Computer Science from Punjab Engineering College, Chandigarh. "
+    aboutContent2 += "I'm very enthusiastic about web development, and always very interested to learn about latest technologies. "
+    aboutContent2 += "I also like to read blogs and in my free time I use to do sketching, painting. "
+    aboutContent2 += "I'm also a TV Series addict and love to read novels."
     return (
       <div className="aboutBackground divBackground">
         <div className="tint aboutTint">
@@ -82,13 +85,13 @@ class AboutPage extends React.Component {
           </div>
           <div style={{"paddingLeft" : "11%", "marginRight" : "30%"}} className="ui computer only grid tablet only grid">
             <Typist className="aboutHeading" startDelay={1500} cursor={cursorSpecs} avgTypingDelay={40}>
-              <span className="homeContent" style={{"color" : "white", "fontWeight" : "100" , "fontSize" : "0.7em"}}>{aboutContent}</span>
+              <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "1em"}}>{aboutContent1} {"I am "}  <span style={{"backgroundColor" : "#0288d1"}}>{role}</span> {" working on "} <span style={{"backgroundColor" : "red"}}>{technology}</span> { " @ " } <span style={{"backgroundColor" : "#e65100"}}>{company}</span> {aboutContent2}</span>
             </Typist>
           </div>
           <div style={this.styles.mobileDiv} className="ui mobile only grid">
             <div style={{"paddingLeft" : "11%", "marginTop" : "0px" , "height" : "60%"}}>
               <Typist className="aboutHeading" startDelay={1500}  avgTypingDelay={40} cursor={{"element" : "_"}}>
-                <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "0.6em"}}>{aboutContent}</span>
+                <span className="homeContent" style={{"color" : "white", "fontWeight" : "400" , "fontSize" : "1em"}}>{aboutContent1} {"I am "}  <span style={{"backgroundColor" : "#0288d1"}}>{role}</span> {" working on "} <span style={{"backgroundColor" : "red"}}>{technology}</span> { " @ " } <span style={{"backgroundColor" : "#e65100"}}>{company}</span> {aboutContent2}</span>
               </Typist>
             </div>
           </div>

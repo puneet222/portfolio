@@ -110,7 +110,7 @@ class ContactPage extends React.Component {
         <div style={{"color" : "white" , "fontSize" : "1em" , "textAlign" : "center" , "marginTop" : "5vh" , "paddingLeft" : "1vw"}}>
           <i className="mobile icon" style={{"color" : "white"}}></i>
           <span>
-          +91 7888648035
+          +91 9988182547
           </span>
           <br/>
           <i className="mail outline icon" style={{"color" : "white"}}></i>

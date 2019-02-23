@@ -111,7 +111,7 @@ class SkillsPage extends React.Component {
       css : 0,
       js : 0,
       angular : 0,
-      jquery : 0,
+      typescript : 0,
       react : 0,
       node : 0,
       mongo : 0,
@@ -204,11 +204,11 @@ class SkillsPage extends React.Component {
     return (
       <div className="ui grid" style={{"width" : "100%" , "paddingLeft" : "10%" , "paddingRight" : "0px"}}> {/* ----------  second row of skills ----------------------  */}
         <div className="three wide column">
-          <h5 className="handwritingFont" style={this.styles.skillsName1}>Jquery</h5>
-          <Circle percent={this.state.jquery} strokeWidth="8" strokeColor="#fe0954" trailWidth="8" trailColor="#616161" strokeLinecap="square" gapDegree={155} gapPosition="bottom"/>
+          <h5 className="handwritingFont" style={this.styles.skillsName1}>Typescript</h5>
+          <Circle percent={this.state.typescript} strokeWidth="8" strokeColor="#fe0954" trailWidth="8" trailColor="#616161" strokeLinecap="square" gapDegree={155} gapPosition="bottom"/>
         </div>
         <div className="three wide column">
-          <h5 className="handwritingFont" style={this.styles.skillsName1}>AngularJs</h5>
+          <h5 className="handwritingFont" style={this.styles.skillsName1}>Angular</h5>
           <Circle percent={this.state.angular} strokeWidth="8" strokeColor="#fe0954" trailWidth="8" trailColor="#616161" strokeLinecap="square"  gapDegree={155} gapPosition="bottom"/>
         </div>
         <div className="three wide column">
@@ -261,14 +261,6 @@ class SkillsPage extends React.Component {
       <div className="ui grid" style={{"width" : "100%" , "paddingLeft" : "10%" , "paddingRight" : "0px"}}> {/* ---------------  start of the fifth row the skills ------------------------- */}
         <div className="five wide column">
           <button className="ui active button" style={this.styles.buttonStyle}>
-          <a href="https://www.google.co.in" target="_blank">
-            <Img src={kongImage} style={this.styles.centerImage}/>
-            <span style={{"marginLeft" : "10%" , "position" : "relative" , "bottom" : "5px" , "color" : "#9E9E9E"}}>Kong</span>
-          </a>
-          </button>
-        </div>
-        <div className="five wide column">
-          <button className="ui active button" style={this.styles.buttonStyle}>
             <Img src={pythonImage} style={this.styles.centerImage}/>
             <span style={{"marginLeft" : "10%" , "position" : "relative" , "bottom" : "5px" , "color" : "#9E9E9E"}}>Python</span>
           </button>
@@ -276,7 +268,7 @@ class SkillsPage extends React.Component {
         <div className="six wide column">
           <button className="ui active button" style={this.styles.buttonStyle}>
             <Img src={rImage} style={{"height" : "1.3em"}}/>
-            <span style={{"marginLeft" : "10%" , "position" : "relative" , "bottom" : "4px" , "color" : "#9E9E9E"}}>R Language</span>
+            <span style={{"marginLeft" : "10%" , "position" : "relative" , "bottom" : "4px" , "color" : "#9E9E9E"}}>R</span>
           </button>
         </div>
       </div>
@@ -294,7 +286,7 @@ class SkillsPage extends React.Component {
       css : this.state.css,
       js : this.state.js,
       angular : this.state.angular,
-      jquery : this.state.jquery,
+      typescript : this.state.typescript,
       react : this.state.react,
       node : this.state.node,
       mongo : this.state.mongo,
@@ -311,19 +303,19 @@ class SkillsPage extends React.Component {
       percent : 80,
       html : 88,
       css : 68,
-      js : 85,
-      angular : 80,
-      jquery : 88,
-      react : 60,
-      node : 85,
-      mongo : 80,
-      sql : 75,
-      c : 80,
-      cpp : 80,
+      js : 75,
+      angular : 60,
+      typescript: 65,
+      react : 50,
+      node : 75,
+      mongo : 60,
+      sql : 65,
+      c : 65,
+      cpp : 75,
       java : 70,
       bootstrap : 90,
       semantic : 50,
-      git : 70,
+      git : 80,
     }
 
     var newObject = {} ;
@@ -432,11 +424,11 @@ class SkillsPage extends React.Component {
             {this.skillsHtmlRow1()}
             <div className="ui grid" style={{"width" : "100%" , "paddingLeft" : "10%" , "paddingRight" : "0px"}}> {/* ---------- start of second row of skills ----------------------  */}
               <div className="five wide column">
-                <h5 className="handwritingFont" style={this.styles.skillsName1}>Jquery</h5>
-                <Circle percent={this.state.jquery} strokeWidth="8" strokeColor="#fe0954" trailWidth="8" trailColor="#616161" strokeLinecap="square" gapDegree={155} gapPosition="bottom"/>
+                <h5 className="handwritingFont" style={this.styles.skillsName1}>Typescript</h5>
+                <Circle percent={this.state.typescript} strokeWidth="8" strokeColor="#fe0954" trailWidth="8" trailColor="#616161" strokeLinecap="square" gapDegree={155} gapPosition="bottom"/>
               </div>
               <div className="five wide column">
-                <h5 className="handwritingFont" style={this.styles.skillsName1}>AngularJs</h5>
+                <h5 className="handwritingFont" style={this.styles.skillsName1}>Angular</h5>
                 <Circle percent={this.state.angular} strokeWidth="8" strokeColor="#fe0954" trailWidth="8" trailColor="#616161" strokeLinecap="square"  gapDegree={155} gapPosition="bottom"/>
               </div>
               <div className="five wide column">

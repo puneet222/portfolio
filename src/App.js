@@ -44,18 +44,6 @@ class App extends Component {
     });
   }
 
-  // removeFoodItem = (itemIndex) => {
-  //   const filteredFoods = this.oldState.selectedFoods.filter(
-  //     (item, idx) => itemIndex !== idx,
-  //   );
-  //   this.setState({ selectedFoods: filteredFoods });
-  // }
-  //
-  // addFood = (food) => {
-  //   const newFoods = this.oldState.selectedFoods.concat(food);
-  //   this.setState({ selectedFoods: newFoods });
-  // }
-
   onHover = () => {
     console.log("on hover") ;
   }
